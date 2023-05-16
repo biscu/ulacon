@@ -1,4 +1,4 @@
-**Davide Uländer **
+#David Uländer
 
 Project made with HTML, CSS, JS
 CSS with Tailwind
