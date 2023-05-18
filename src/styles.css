@@ -619,7 +619,7 @@ video {
 .lineChild {
   overflow: hidden;
 }
-.wordsChild {
+.wordsParent {
   overflow: hidden;
 }
 .charsParent {

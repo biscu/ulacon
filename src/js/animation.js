@@ -97,5 +97,5 @@ cliButton.addEventListener("click", () => {
 
 getTitleHeight();
 
-gsap.delayedCall(1, titleAnimation);
-gsap.delayedCall(1, paragraphAnimation);
+gsap.delayedCall(0.3, titleAnimation);
+gsap.delayedCall(0.3, paragraphAnimation);
