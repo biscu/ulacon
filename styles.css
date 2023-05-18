@@ -9,14 +9,34 @@
   }
 }
 
+.charsChild {
+  overflow: hidden;
+}
 .lineChild {
   overflow: hidden;
 }
-.lineParent {
+.wordsChild {
+  overflow: hidden;
+}
+.charsParent {
   /* font-kerning: none; */
 }
 
 h1,
 h2 {
   font-kerning: none;
+  text-wrap: balance;
+}
+
+.hero {
+  font-size: 10vw;
+}
+
+.cli-box {
+  /* transform: translateX(-50%); */
+  opacity: 0;
+}
+
+.cantScroll {
+  overflow: hidden !important;
 }

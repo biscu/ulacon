@@ -12,21 +12,21 @@ function titleAnimation() {
 
   targets.forEach((target) => {
     let SplitClient = new SplitText(target, {
-      type: "chars, words, lines",
-      charsClass: "lineParent",
+      type: "words",
+      wordsClass: "wordsParent",
     });
     let SplitParent = new SplitText(target, {
-      type: "chars, words, lines",
-      charsClass: "lineChild",
+      type: "words",
+      wordsClass: "wordsChild",
     });
-    let chars = SplitParent.chars; //an array of all the divs that wrap each character
+    let chars = SplitParent.words; //an array of all the divs that wrap each character
     gsap.fromTo(".text-animated", { autoAlpha: 0 }, { autoAlpha: 1 });
     gsap.from(chars, {
-      duration: 0.8,
+      duration: 1.2,
       delay: 0.02,
       y: titleHeight,
       ease: CustomEase.create("custom", "M0,0,C0.496,0.298,0,1,1,1"),
-      stagger: 0.04,
+      stagger: 0.02,
       scrollTrigger: {
         trigger: target,
         markers: false,
@@ -36,7 +36,7 @@ function titleAnimation() {
     });
   });
 }
-// Title and subtitle
+//subtitle
 function paragraphAnimation() {
   const targets = gsap.utils.toArray(".paragraph-animated");
 
@@ -54,10 +54,10 @@ function paragraphAnimation() {
     gsap.from(lines, {
       opacity: 0,
       duration: 1.2,
-      delay: 0.8,
+      delay: 0.5,
       y: 50,
       ease: CustomEase.create("custom", "M0,0,C0.496,0.298,0,1,1,1"),
-      stagger: 0.1,
+      stagger: 0.08,
       scrollTrigger: {
         trigger: target,
         markers: false,
@@ -67,6 +67,32 @@ function paragraphAnimation() {
     });
   });
 }
+
+//TRIGGER CLI BOX UP AND DOWN
+gsap.set(".cli-box", { yPercent: 100, opacity: 1 });
+var tl = gsap.timeline({ paused: true, reversed: true });
+tl.to(".cli-box", {
+  duration: 1,
+  yPercent: 0,
+  ease: CustomEase.create("custom", "M0,0,C0.496,0.298,0,1,1,1"),
+});
+
+function allowBodyScroll() {
+  var body = document.body;
+  if (body.classList.contains("cantScroll")) {
+    body.classList.remove("cantScroll");
+  } else {
+    body.classList.add("cantScroll");
+  }
+}
+
+const cliButton = document.getElementById("cli-btn");
+cliButton.addEventListener("click", () => {
+  allowBodyScroll();
+  tl.reversed() ? tl.play() : tl.reverse();
+  console.log("terminal animated");
+});
+
 getTitleHeight();
 
 gsap.delayedCall(1, titleAnimation);
