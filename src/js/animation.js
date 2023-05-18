@@ -89,6 +89,8 @@ function allowBodyScroll() {
 const cliButton = document.getElementById("cli-btn");
 cliButton.addEventListener("click", () => {
   allowBodyScroll();
+  var delay = 800;
+  setTimeout(terminal, delay);
   tl.reversed() ? tl.play() : tl.reverse();
   console.log("terminal animated");
 });
