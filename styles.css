@@ -44,6 +44,7 @@ h2 {
 }
 
 /* Add CRT effect  */
+/* http://aleclownes.com/2017/02/01/crt-display.html */
 
 @keyframes flicker {
   0% {
