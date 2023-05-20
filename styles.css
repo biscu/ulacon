@@ -6,6 +6,8 @@
     font-family: "Catalogue";
     src: local("font/Catalogue-Light.otf"),
       url("font/Catalogue-Light.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
   }
 }
 
@@ -26,6 +28,10 @@ h1,
 h2 {
   font-kerning: none;
   text-wrap: balance;
+  font-weight: normal !important;
+}
+
+body {
 }
 
 .hero {

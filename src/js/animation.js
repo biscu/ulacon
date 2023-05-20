@@ -75,6 +75,7 @@ tl.to(".cli-box", {
   duration: 1,
   yPercent: 0,
   ease: CustomEase.create("custom", "M0,0,C0.496,0.298,0,1,1,1"),
+  onComplete: terminal,
 });
 
 function allowBodyScroll() {
@@ -89,8 +90,8 @@ function allowBodyScroll() {
 const cliButton = document.getElementById("cli-btn");
 cliButton.addEventListener("click", () => {
   allowBodyScroll();
-  var delay = 800;
-  setTimeout(terminal, delay);
+  // var delay = 800;
+  // setTimeout(terminal, delay);
   tl.reversed() ? tl.play() : tl.reverse();
   console.log("terminal animated");
 });

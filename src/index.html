@@ -19,109 +19,109 @@
       }
     </style>
   </head>
-  <body class="bg-slate-200 max-w-screen-2xl font-primary">
-    <button id="cli-btn" class="fixed">Terminal</button>
+  <body class="bg-white font-black font-primary antialiased">
+    <button id="cli-btn" class="fixed mix-blend-difference text-slate-50">
+      Terminal
+    </button>
     <section
       class="cli-box crt text-white fixed bottom-0 left-0 right-0 bg-accent h-2/4 z-10"
     >
-      <main>
-        <section class="hidden" id="home">
-          CLI - Command Line Interface Simulation<br />
-          A fun experiment for displaying simple info in a geeky manner.<br />
-          Type 'help' + <kbd>Enter</kbd> -- for available commands.<br />
-        </section>
+      <section class="hidden" id="home">
+        CLI - Command Line Interface Simulation<br />
+        A fun experiment for displaying simple info in a geeky manner.<br />
+        Type 'help' + <kbd>Enter</kbd> -- for available commands.<br />
+      </section>
 
-        <section class="hidden" id="about">
-          <h2><span>&raquo;About</span></h2>
-          <p>
-            This is an experiment built by
-            <a href="http://syndicatefx.com" target="_blank">Paulo Nunes</a> for
-            showcasing a user profile or cv in an unusual but original way by
-            simulating a command line interface. It's nothing more than the
-            usual hidden elements triggered by some jQuery to show/hide each
-            section of content, based on input values.<br />
-            It makes use of
-            <a
-              href="https://github.com/gr8pathik/jquery-texttyper"
-              target="_blank"
-              >jQuery-texttyper</a
-            >
-            for the fancy letter animations.
-          </p>
-        </section>
+      <section class="hidden" id="about">
+        <h2><span>&raquo;About</span></h2>
+        <p>
+          This is an experiment built by
+          <a href="http://syndicatefx.com" target="_blank">Paulo Nunes</a> for
+          showcasing a user profile or cv in an unusual but original way by
+          simulating a command line interface. It's nothing more than the usual
+          hidden elements triggered by some jQuery to show/hide each section of
+          content, based on input values.<br />
+          It makes use of
+          <a
+            href="https://github.com/gr8pathik/jquery-texttyper"
+            target="_blank"
+            >jQuery-texttyper</a
+          >
+          for the fancy letter animations.
+        </p>
+      </section>
 
-        <section class="hidden" id="usage">
-          <h2><span>&raquo;Usage</span></h2>
-          <p>
-            Using it is pretty straight forward. Create several(as much as you
-            need) divs or &laquo;section&raquo; elements each with it's unique
-            id to hold your content. Make sure to have an error section
-            (id="error") with some information to warn the user when he/she
-            mistypes a command or if there is no section with that name, think
-            of it as a 404 page.<br />
-            A section with id="help" is also required so you can list all the
-            available sections and let your users know what words to write to
-            access that particular content.<br />
-            The input field must be a standalone element and must not be placed
-            inside any of the content divs or sections, and make sure you give
-            it a classname "command", if you want to name it anything else you
-            need to edit the app.js and change all instances of .command in the
-            script to match your chosen classname.<br />
-            In short, just view the source code of this demo, copy/modify it to
-            your liking making sure you include the error and help sections.
-          </p>
-        </section>
+      <section class="hidden" id="usage">
+        <h2><span>&raquo;Usage</span></h2>
+        <p>
+          Using it is pretty straight forward. Create several(as much as you
+          need) divs or &laquo;section&raquo; elements each with it's unique id
+          to hold your content. Make sure to have an error section (id="error")
+          with some information to warn the user when he/she mistypes a command
+          or if there is no section with that name, think of it as a 404
+          page.<br />
+          A section with id="help" is also required so you can list all the
+          available sections and let your users know what words to write to
+          access that particular content.<br />
+          The input field must be a standalone element and must not be placed
+          inside any of the content divs or sections, and make sure you give it
+          a classname "command", if you want to name it anything else you need
+          to edit the app.js and change all instances of .command in the script
+          to match your chosen classname.<br />
+          In short, just view the source code of this demo, copy/modify it to
+          your liking making sure you include the error and help sections.
+        </p>
+      </section>
 
-        <section class="hidden" id="download">
-          <h2><span>&raquo;Download</span></h2>
-          <p>
-            Download/fork the source code:
-            <a href="https://github.com/syndicatefx/cli">Github</a><br />
-            Depends on jQuery<br />
-            License: MIT
-          </p>
-        </section>
+      <section class="hidden" id="download">
+        <h2><span>&raquo;Download</span></h2>
+        <p>
+          Download/fork the source code:
+          <a href="https://github.com/syndicatefx/cli">Github</a><br />
+          Depends on jQuery<br />
+          License: MIT
+        </p>
+      </section>
 
-        <section class="hidden" id="error">
-          <p>Command not found!</p>
-          <p></p>
-          <p>
-            <span
-              >Type 'help' + <kbd>Enter</kbd> -- for available commands.</span
-            >
-          </p>
-        </section>
+      <section class="hidden" id="error">
+        <p>Command not found!</p>
+        <p></p>
+        <p>
+          <span>Type 'help' + <kbd>Enter</kbd> -- for available commands.</span>
+        </p>
+      </section>
 
-        <section class="hidden" id="help">
-          <h2><span>&raquo;Help?</span></h2>
-          <p>
-            <span>Type [command] + <kbd>Enter</kbd></span>
-          </p>
-          <ul>
-            <li>'home' -- Thats obvious!</li>
-            <li>'about' -- What's this for</li>
-            <li>'usage' -- How to</li>
-            <li>'download' -- Download + license</li>
-            <li>'help' -- displays this list</li>
-          </ul>
-        </section>
+      <section class="hidden" id="help">
+        <h2><span>&raquo;Help?</span></h2>
+        <p>
+          <span>Type [command] + <kbd>Enter</kbd></span>
+        </p>
+        <ul>
+          <li>'home' -- Thats obvious!</li>
+          <li>'about' -- What's this for</li>
+          <li>'usage' -- How to</li>
+          <li>'download' -- Download + license</li>
+          <li>'help' -- displays this list</li>
+        </ul>
+      </section>
 
-        <span class="command hidden"
-          >syndicatefx:/$
-          <input
-            class="bg-transparent border-transparent focus:border-transparent focus:outline-none focus:ring-0"
-            type="text"
-        /></span>
-      </main>
+      <span class="command hidden"
+        >syndicatefx:/$
+        <input
+          class="bg-transparent border-transparent focus:border-transparent focus:outline-none focus:ring-0"
+          type="text"
+      /></span>
     </section>
-    <section class="mx-auto h-screen flex flex-col justify-center px-4 w-4/6">
+    <section
+      class="mx-auto h-screen text-slate-800 flex flex-col justify-center px-4 max-w-screen-2xl"
+    >
       <h1
-        class="tracking-tight text-gray-900 xl:text-8xl md:text-6xl text-6xl mb-6 text-animated overflow-hidden invisible"
+        class="tracking-tight xl:text-8xl md:text-6xl text-6xl mb-6 text-animated overflow-hidden invisible w-4/6"
       >
         Uländer is a backend master, he does it all.
       </h1>
       <h2
-        class="font-primary xl:leading-tight md:leading-tight text-gray-900 xl:text-2xl md:text-2xl text-2xl paragraph-animated overflow-hidden invisible"
+        class="xl:leading-tight md:leading-tight xl:text-2xl md:text-2xl text-2xl paragraph-animated overflow-hidden invisible w-4/6"
       >
         We believe that technology can revolutionize the way businesses operate.
         Our team of expert consultants is committed to delivering innovative
@@ -130,7 +130,18 @@
         the curve.
       </h2>
     </section>
-    <section class="mx-auto flex flex-col justify-center px-4 w-4/6">
+    <section
+      class="mx-auto flex flex-col justify-center px-4 w-screen h-screen"
+    >
+      <h2
+        class="font-primary bg-black h-full w-full text-gray-900 hero mb-6 text-animated overflow-hidden invisible"
+      >
+        Backend
+      </h2>
+    </section>
+    <section
+      class="mx-auto flex flex-col justify-center px-4 w-4/6 max-w-screen-2xl"
+    >
       <h2
         class="font-primary text-gray-900 hero mb-6 text-animated overflow-hidden invisible"
       >
