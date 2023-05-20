@@ -20,12 +20,12 @@
         beforeAnimation: function () {},
         afterAnimation: function () {},
         speed: 10,
-        nextLineDelay: 400,
+        nextLineDelay: 900,
         startsFrom: 0,
         repeatAnimation: false,
         repeatDelay: 4e3,
         repeatTimes: 1,
-        cursorHtml: '<span class="cursor">|</span>',
+        cursorHtml: '<span class="cursor">▐ </span>',
       },
       r = e.extend({}, n, t);
     this.each(function () {
