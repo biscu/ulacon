@@ -4,8 +4,10 @@
 @layer base {
   @font-face {
     font-family: "Catalogue";
-    src: local("font/Catalogue-Light.otf"),
-      url("font/Catalogue-Light.otf") format("opentype");
+    src: local("font/Catalogue-Book.otf"),
+      url("font/Catalogue-Book.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
   }
 }
 
@@ -23,9 +25,18 @@
 }
 
 h1,
-h2 {
+h2,
+h3,
+h4,
+p,
+button {
   font-kerning: none;
   text-wrap: balance;
+  font-weight: normal !important;
+  text-rendering: optimizeSpeed;
+}
+
+body {
 }
 
 .hero {
@@ -44,6 +55,7 @@ h2 {
 }
 
 /* Add CRT effect  */
+/* http://aleclownes.com/2017/02/01/crt-display.html */
 
 @keyframes flicker {
   0% {
