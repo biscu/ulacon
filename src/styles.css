@@ -1057,8 +1057,8 @@ body {
 }
 @media (min-width: 768px) {
 
-  .md\:text-7xl {
-    font-size: 4.5rem;
+  .md\:text-6xl {
+    font-size: 3.75rem;
     line-height: 1;
   }
 
