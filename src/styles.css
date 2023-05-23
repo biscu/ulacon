@@ -1045,8 +1045,8 @@ body {
 }
 @media (min-width: 768px) {
 
-  .md\:text-6xl {
-    font-size: 3.75rem;
+  .md\:text-7xl {
+    font-size: 4.5rem;
     line-height: 1;
   }
 
@@ -1061,8 +1061,8 @@ body {
 }
 @media (min-width: 1280px) {
 
-  .xl\:text-8xl {
-    font-size: 6rem;
+  .xl\:text-7xl {
+    font-size: 4.5rem;
     line-height: 1;
   }
 
