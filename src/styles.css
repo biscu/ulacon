@@ -379,6 +379,13 @@ video {
     font-weight: normal;
     font-style: normal;
   }
+  @font-face {
+    font-family: "Catalogue Medium";
+    src: local("font/Catalogue-Medium.otf"),
+      url("font/Catalogue-Medium.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
 
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
@@ -615,6 +622,9 @@ video {
 .font-primary {
   font-family: Catalogue;
 }
+.font-primaryMedium {
+  font-family: Catalogue Medium;
+}
 .text-6xl {
   font-size: 3.75rem;
   line-height: 1;
@@ -623,8 +633,8 @@ video {
   font-size: 1.5rem;
   line-height: 2rem;
 }
-.tracking-tight {
-  letter-spacing: -0.025em;
+.uppercase {
+  text-transform: uppercase;
 }
 .text-slate-800 {
   --tw-text-opacity: 1;
@@ -633,6 +643,10 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.text-slate-900 {
+  --tw-text-opacity: 1;
+  color: rgb(15 23 42 / var(--tw-text-opacity));
 }
 .text-gray-900 {
   --tw-text-opacity: 1;
@@ -662,8 +676,6 @@ h3,
 h4,
 p,
 button {
-  -webkit-font-kerning: none;
-          font-kerning: none;
   text-wrap: balance;
   font-weight: normal !important;
   text-rendering: optimizeSpeed;
@@ -1056,7 +1068,7 @@ body {
   }
 
   .md\:leading-tight {
-    line-height: 1.2;
+    line-height: 1.25;
   }
 }
 @media (min-width: 1280px) {
@@ -1072,6 +1084,6 @@ body {
   }
 
   .xl\:leading-tight {
-    line-height: 1.2;
+    line-height: 1.25;
   }
 }

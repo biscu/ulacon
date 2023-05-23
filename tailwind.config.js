@@ -8,9 +8,7 @@ module.exports = {
     },
     fontFamily: {
       primary: "Catalogue",
-    },
-    lineHeight: {
-      tight: "1.2",
+      primaryMedium: "Catalogue Medium",
     },
   },
   variants: {
