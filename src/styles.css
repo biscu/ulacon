@@ -373,16 +373,16 @@ video {
   height: auto;
 }
   @font-face {
-    font-family: "Catalogue";
-    src: local("font/Catalogue-Book.otf"),
-      url("font/Catalogue-Book.otf") format("opentype");
+    font-family: "Satoshi Regular";
+    src: local("font/Satoshi-Regular.otf"),
+      url("font/Satoshi-Regular.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
   }
   @font-face {
-    font-family: "Catalogue Medium";
-    src: local("font/Catalogue-Medium.otf"),
-      url("font/Catalogue-Medium.otf") format("opentype");
+    font-family: "Satoshi Medium";
+    src: local("font/Satoshi-Medium.otf"),
+      url("font/Satoshi-Medium.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
   }
@@ -568,6 +568,9 @@ video {
 .flex {
   display: flex;
 }
+.grid {
+  display: grid;
+}
 .hidden {
   display: none;
 }
@@ -592,11 +595,17 @@ video {
 .max-w-screen-2xl {
   max-width: 1536px;
 }
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
 .flex-col {
   flex-direction: column;
 }
 .justify-center {
   justify-content: center;
+}
+.gap-4 {
+  gap: 1rem;
 }
 .overflow-hidden {
   overflow: hidden;
@@ -615,23 +624,39 @@ video {
 .bg-transparent {
   background-color: transparent;
 }
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+.align-middle {
+  vertical-align: middle;
+}
 .font-primary {
-  font-family: Catalogue;
+  font-family: Satoshi Regular;
 }
 .font-primaryMedium {
-  font-family: Catalogue Medium;
+  font-family: Satoshi Medium;
 }
-.text-6xl {
-  font-size: 3.75rem;
+.text-9xl {
+  font-size: 8rem;
   line-height: 1;
 }
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.leading-3 {
+  line-height: .75rem;
+}
+.tracking-tighter {
+  letter-spacing: -0.05em;
 }
 .text-slate-800 {
   --tw-text-opacity: 1;
@@ -641,13 +666,13 @@ video {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
-.text-slate-900 {
+.text-space {
   --tw-text-opacity: 1;
-  color: rgb(15 23 42 / var(--tw-text-opacity));
+  color: rgb(17 17 17 / var(--tw-text-opacity));
 }
-.text-gray-900 {
+.text-slate-200 {
   --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity));
+  color: rgb(226 232 240 / var(--tw-text-opacity));
 }
 .antialiased {
   -webkit-font-smoothing: antialiased;
@@ -1070,8 +1095,8 @@ body {
 }
 @media (min-width: 1280px) {
 
-  .xl\:text-7xl {
-    font-size: 4.5rem;
+  .xl\:text-9xl {
+    font-size: 8rem;
     line-height: 1;
   }
 

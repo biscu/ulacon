@@ -4,16 +4,16 @@
 
 @layer base {
   @font-face {
-    font-family: "Catalogue";
-    src: local("font/Catalogue-Book.otf"),
-      url("font/Catalogue-Book.otf") format("opentype");
+    font-family: "Satoshi Regular";
+    src: local("font/Satoshi-Regular.otf"),
+      url("font/Satoshi-Regular.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
   }
   @font-face {
-    font-family: "Catalogue Medium";
-    src: local("font/Catalogue-Medium.otf"),
-      url("font/Catalogue-Medium.otf") format("opentype");
+    font-family: "Satoshi Medium";
+    src: local("font/Satoshi-Medium.otf"),
+      url("font/Satoshi-Medium.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
   }
