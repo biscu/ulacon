@@ -1,14 +1,14 @@
 console.log("animation file is connected");
 
 function getTitleHeight() {
-  title = document.querySelector(".text-animated");
+  title = document.querySelector(".h-animated");
   titleHeight = title.offsetHeight;
   console.log("h1 title is " + titleHeight + " px");
 }
 
 // Title and subtitle
 function titleAnimation() {
-  const targets = gsap.utils.toArray(".text-animated");
+  const targets = gsap.utils.toArray(".h-animated");
 
   targets.forEach((target) => {
     let SplitClient = new SplitText(target, {
@@ -20,7 +20,7 @@ function titleAnimation() {
       wordsClass: "wordsChild",
     });
     let chars = SplitParent.words; //an array of all the divs that wrap each character
-    gsap.fromTo(".text-animated", { autoAlpha: 0 }, { autoAlpha: 1 });
+    gsap.fromTo(".h-animated", { autoAlpha: 0 }, { autoAlpha: 1 });
     gsap.from(chars, {
       duration: 1.2,
       delay: 0.02,
@@ -38,7 +38,7 @@ function titleAnimation() {
 }
 //subtitle
 function paragraphAnimation() {
-  const targets = gsap.utils.toArray(".paragraph-animated");
+  const targets = gsap.utils.toArray(".p-animated");
 
   targets.forEach((target) => {
     let SplitChild = new SplitText(target, {
@@ -50,7 +50,7 @@ function paragraphAnimation() {
       linesClass: "lineChild",
     });
     let lines = SplitChild.lines; //an array of all the divs that wrap each character
-    gsap.fromTo(".paragraph-animated", { autoAlpha: 0 }, { autoAlpha: 1 });
+    gsap.fromTo(".p-animated", { autoAlpha: 0 }, { autoAlpha: 1 });
     gsap.from(lines, {
       opacity: 0,
       duration: 1.2,
@@ -87,14 +87,14 @@ function allowBodyScroll() {
   }
 }
 
-const cliButton = document.getElementById("cli-btn");
-cliButton.addEventListener("click", () => {
-  allowBodyScroll();
-  // var delay = 800;
-  // setTimeout(terminal, delay);
-  tl.reversed() ? tl.play() : tl.reverse();
-  console.log("terminal animated");
-});
+// const cliButton = document.getElementById("cli-btn");
+// cliButton.addEventListener("click", () => {
+//   allowBodyScroll();
+//   // var delay = 800;
+//   // setTimeout(terminal, delay);
+//   tl.reversed() ? tl.play() : tl.reverse();
+//   console.log("terminal animated");
+// });
 
 getTitleHeight();
 
