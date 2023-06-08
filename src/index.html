@@ -20,6 +20,9 @@
     </style>
   </head>
   <body>
+    <div class="loader" id="loader">
+      <span class="text-light loader-logo">Ulacon</span>
+    </div>
     <!-- <button id="cli-btn" class="fixed">Terminal</button> -->
     <!-- <section class="cli-box crt">
       <section class="hidden" id="home">
@@ -108,38 +111,84 @@
           type="text"
       /></span>
     </section> -->
-    <section class="section hero">
-      <h1 class="headingXl text-dark heading-hero h-animated">
-        A development <br />
-        consultancy with <br />
-        character
-      </h1>
-      <h2 class="paragraph text-dark p-animated">
-        We believe that technology can revolutionize the way businesses operate.
-        Our team of expert consultants is committed to delivering innovative
-        solutions that can help your company stay ahead of the curveto
-        delivering innovative solutions that can help your company stay ahead of
-        the curve.
-      </h2>
-      <div style="position: relative" class="crt">
-        <img class="ctr" src="assets/test.jpg" />
+    <section class="bg-light">
+      <div class="container hero">
+        <h1 class="headingXl heading-hero h-animated">
+          A development <br />
+          consultancy with <br />
+          character
+        </h1>
+        <h2 class="paragraph heading-sub p-animated">
+          We believe that technology can revolutionize the way businesses
+          operate. Our team of expert consultants is committed to delivering
+          innovative solutions that can help your company stay ahead of the
+          curveto delivering innovative solutions that can help your company
+          stay ahead of the curve.
+        </h2>
+        <div class="heading-img">
+          <img class="" src="assets/test.jpg" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-light">
+      <div class="container grid-row">
+        <h1 class="headingXl span-3 h-animated">
+          Ulacon is David Ulander 10 years of experience in backed solutions
+        </h1>
+        <h2 class="paragraph span-3 p-animated">
+          We believe that technology can revolutionize the way businesses
+          operate. Our team of expert consultants is committed to delivering
+          innovative solutions that can help your company stay ahead of the
+          curveto delivering innovative solutions that can help your company
+          stay ahead of the curve.
+        </h2>
+      </div>
+    </section>
+    <section class="section bg-dark">
+      <div class="container grid-row">
+        <h1 class="headingXl span-3 h-animated">
+          Ulacon is David Ulander 10 years of experience in backed solutions and
+          cloud operations
+        </h1>
+        <h2 class="paragraph span-3 p-animated">
+          We believe that technology can revolutionize the way businesses
+          operate. Our team of expert consultants is committed to delivering
+          innovative solutions that can help your company stay ahead of the
+          curveto delivering innovative solutions that can help your company
+          stay ahead of the curve.
+        </h2>
+      </div>
+    </section>
+    <section class="section bg-purple">
+      <div class="container grid-row">
+        <h1 class="headingXl h-animated span-3">
+          Ulacon is David Ulander 10 years of experience in backed solutions and
+          cloud operations
+        </h1>
+        <h2 class="paragraph p-animated span-3">
+          We believe that technology can revolutionize the way businesses
+          operate. Our team of expert consultants is committed to delivering
+          innovative solutions that can help your company stay ahead of the
+          curveto delivering innovative solutions that can help your company
+          stay ahead of the curve.
+        </h2>
       </div>
     </section>
     <!-- <section class="mx-auto w-1/3 sticky overflow-hidden">
       <div class="absolute w-full h-full z-10"></div>
       <img class="w-full z-0" src="assets/image2.jpg" alt="computer" />
     </section> -->
-    <section class="section service">
-      <h2 class="headingL text-light h-animated">CLOUD</h2>
-      <p class="paragraph text-light p-animated">
-        We believe that technology can revolutionize the way businesses operate.
-        Our team of expert consultants is committed to delivering innovative
-        solutions that can help your company stay ahead of the curve. We believe
-        that technology can revolutionize the way businesses operate.
-      </p>
-    </section>
 
     <!-- Script for animation -->
+    <script src="js/pace.js"></script>
+    <script>
+      Pace.on("done", function () {
+        const loader = document.querySelector(".loader");
+        console.log("Loaded ✅");
+        // loader.classList.add("animation"); add animation after loader completed
+      });
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/CustomEase.min.js"></script>
