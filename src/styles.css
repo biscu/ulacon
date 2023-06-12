@@ -141,7 +141,7 @@ body {
 }
 .paragraph {
   font-size: 1.5rem;
-  line-height: 1em;
+  line-height: 1.2em;
 }
 
 .hidden {
@@ -156,6 +156,9 @@ body {
 }
 .wordsParent {
   overflow: hidden;
+}
+.wordsChild {
+  padding-right: 0.06em;
 }
 .charsParent {
   /* font-kerning: none; */
