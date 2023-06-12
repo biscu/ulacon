@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Helvetica Neue Roman";
-  src: local("font/HelveticaNeue-Roman.otf"),
-    url("font/HelveticaNeue-Roman.otf") format("opentype");
+  src: local("font/HelveticaNeue-Roman.woff2"),
+    url("font/HelveticaNeue-Roman.woff2") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
