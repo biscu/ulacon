@@ -149,8 +149,9 @@ body {
   line-height: 1.2em;
 }
 
-.hidden {
-  display: none;
+.h-animated,
+.p-animated {
+  visibility: hidden;
 }
 
 .charsChild {
