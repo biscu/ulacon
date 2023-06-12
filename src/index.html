@@ -25,8 +25,15 @@
         display: block;
       }
     </style>
+    <script>
+      /*to prevent Firefox FOUC, this must be here*/
+      let FF_FOUC_FIX;
+    </script>
   </head>
   <body>
+    <script>
+      0;
+    </script>
     <div class="loader" id="loader">
       <span class="text-light loader-logo">Ulacon</span>
     </div>
