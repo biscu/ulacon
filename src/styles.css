@@ -127,6 +127,11 @@ body {
 
 .heading-img {
   grid-area: img;
+  overflow: hidden;
+}
+
+.image-hero {
+  transform: scale(1.5);
 }
 
 .headingXl {
@@ -141,7 +146,7 @@ body {
 }
 .paragraph {
   font-size: 1.5rem;
-  line-height: 1em;
+  line-height: 1.2em;
 }
 
 .hidden {
@@ -156,6 +161,9 @@ body {
 }
 .wordsParent {
   overflow: hidden;
+}
+.wordsChild {
+  padding-right: 0.06em;
 }
 .charsParent {
   /* font-kerning: none; */
@@ -715,4 +723,20 @@ template {
 
 [hidden] {
   display: none;
+}
+
+html.lenis {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
 }
