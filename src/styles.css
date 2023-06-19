@@ -58,11 +58,20 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto auto;
-  row-gap: 5rem;
+  row-gap: 2rem;
 }
 
 .span-3 {
   grid-column: span 3;
+}
+.span-4 {
+  grid-column: span 4;
+}
+
+.span-full {
+  font-size: 15vw !important;
+  grid-column: span 4;
+  line-height: 80%;
 }
 
 .loader-logo {
@@ -135,9 +144,9 @@ body {
 }
 
 .headingXl {
-  line-height: 90%;
+  line-height: 100%;
   font-size: 6vw;
-  letter-spacing: -0.06em;
+  letter-spacing: -0.04em;
 }
 .headingL {
   font-size: 4vw;
@@ -162,9 +171,12 @@ body {
 }
 .wordsParent {
   overflow: hidden;
+  padding-bottom: 0.1em;
+  padding-right: 0.06em;
+  margin-left: -0.06em;
+  margin-top: -0.1em;
 }
 .wordsChild {
-  padding-right: 0.06em;
 }
 .charsParent {
   /* font-kerning: none; */

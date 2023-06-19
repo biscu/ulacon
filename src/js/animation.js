@@ -59,7 +59,7 @@ function paragraphAnimation() {
       scrollTrigger: {
         trigger: target,
         markers: false,
-        start: "top 80%",
+        start: "top 100%",
         scrub: false,
       },
     });
