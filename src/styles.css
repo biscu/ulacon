@@ -160,7 +160,17 @@ body {
 
 .h-animated,
 .p-animated {
-  visibility: hidden;
+  /* visibility: hidden; */
+}
+
+.spline-logo {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 137px;
+  height: 36px;
+  z-index: 9999999;
+  background-color: var(--black);
 }
 
 .charsChild {

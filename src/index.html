@@ -168,6 +168,16 @@
         </h2>
       </div>
     </section>
+    <section
+      class="section bg-dark"
+      style="overflow: hidden; height: 400px; position: relative"
+    >
+      <div class="spline-logo"></div>
+      <spline-viewer
+        loading="eager"
+        url="https://prod.spline.design/QohPpvS3YVzUA6Q8/scene.splinecode"
+      ></spline-viewer>
+    </section>
     <section class="section bg-purple">
       <div class="container grid-row">
         <h1 class="headingXl span-full h-animated">Span Full</h1>
@@ -197,6 +207,10 @@
         // loader.classList.add("animation"); add animation after loader completed
       });
     </script>
+    <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer@0.9.369/build/spline-viewer.js"
+    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
     <script src="js/SplitText.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
@@ -209,6 +223,6 @@
       })();
     </script>
     <!-- <script src="js/cli.js"></script> -->
-    <script src="js/animation.js"></script>
+    <!-- <script src="js/animation.js"></script> -->
   </body>
 </html>
