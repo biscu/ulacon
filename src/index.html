@@ -168,15 +168,18 @@
         </h2>
       </div>
     </section>
-    <section
-      class="section bg-dark"
-      style="overflow: hidden; height: 400px; position: relative"
-    >
-      <div class="spline-logo"></div>
-      <spline-viewer
-        loading="eager"
-        url="https://prod.spline.design/QohPpvS3YVzUA6Q8/scene.splinecode"
-      ></spline-viewer>
+    <section class="section bg-dark">
+      <div
+        class="container"
+        style="width: 50%; height: 100%; position: relative"
+      >
+        <div class="spline-logo"></div>
+        <spline-viewer
+          style="width: 100%; height: 100%; margin: 0 auto"
+          loading="eager"
+          url="https://prod.spline.design/QohPpvS3YVzUA6Q8/scene.splinecode"
+        ></spline-viewer>
+      </div>
     </section>
     <section class="section bg-purple">
       <div class="container grid-row">
@@ -211,6 +214,9 @@
       type="module"
       src="https://unpkg.com/@splinetool/viewer@0.9.369/build/spline-viewer.js"
     ></script>
+    <script>
+      document.getElementById("logo").style.display = "none !important";
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
     <script src="js/SplitText.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
