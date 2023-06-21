@@ -169,6 +169,7 @@ body {
 
 .logo-animated {
   transform: scale(0.5);
+  visibility: hidden;
 }
 
 .spline-logo {

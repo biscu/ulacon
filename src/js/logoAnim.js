@@ -1,4 +1,5 @@
 var tl = gsap.timeline({});
+gsap.fromTo(".logo-animated", { autoAlpha: 0 }, { autoAlpha: 1 });
 tl.fromTo(
   ".letter",
   {
