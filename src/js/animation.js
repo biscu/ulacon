@@ -5,8 +5,45 @@ function getTitleHeight() {
   titleHeight = title.offsetHeight;
   console.log("h1 title is " + titleHeight + " px");
 }
+function getHeroHeight() {
+  hero = document.querySelector(".hero-animated");
+  heroHeight = hero.offsetHeight;
+  console.log("h1 title is " + heroHeight + " px");
+}
 
 // Title
+function heroAnimation() {
+  const targets = gsap.utils.toArray(".hero-animated");
+
+  targets.forEach((target) => {
+    let SplitClient = new SplitText(target, {
+      type: "words",
+      wordsClass: "wordsParent",
+      // charsClass: "charsParent",
+    });
+    let SplitParent = new SplitText(target, {
+      type: "words",
+      wordsClass: "wordsChild",
+      // charsClass: "charsChild",
+    });
+    let words = SplitParent.words; //an array of all the divs that wrap each character
+    gsap.fromTo(".h-animated", { autoAlpha: 0 }, { autoAlpha: 1 });
+    gsap.from(words, {
+      duration: 1.2,
+      y: heroHeight,
+      ease: CustomEase.create("custom", "M0,0,C0.496,0.298,0,1,1,1"),
+      stagger: 0.08,
+      delay: 2.4,
+      scrollTrigger: {
+        trigger: target,
+        markers: false,
+        start: "top 100%",
+        scrub: false,
+      },
+    });
+  });
+}
+
 function titleAnimation() {
   const targets = gsap.utils.toArray(".h-animated");
 
@@ -14,10 +51,12 @@ function titleAnimation() {
     let SplitClient = new SplitText(target, {
       type: "words",
       wordsClass: "wordsParent",
+      // charsClass: "charsParent",
     });
     let SplitParent = new SplitText(target, {
       type: "words",
       wordsClass: "wordsChild",
+      // charsClass: "charsChild",
     });
     let words = SplitParent.words; //an array of all the divs that wrap each character
     gsap.fromTo(".h-animated", { autoAlpha: 0 }, { autoAlpha: 1 });
@@ -66,6 +105,55 @@ function paragraphAnimation() {
   });
 }
 
+var tl = gsap.timeline();
+tl.to(".marquee-row", {
+  xPercent: -50,
+  scrollTrigger: {
+    trigger: ".marquee-row",
+    markers: false,
+    start: "top 100%",
+    end: "bottom -20%",
+    scrub: 0.05,
+  },
+});
+
+var tlMarqueeInverted = gsap.timeline();
+tlMarqueeInverted.to(".marquee-row2", {
+  xPercent: -70,
+  scrollTrigger: {
+    trigger: ".marquee-row2",
+    markers: false,
+    start: "top 100%",
+    end: "bottom -20%",
+    scrub: 0.05,
+  },
+});
+
+var tl = gsap.timeline({});
+gsap.fromTo(".logo-animated", { autoAlpha: 0 }, { autoAlpha: 1 });
+tl.fromTo(
+  ".letter",
+  {
+    drawSVG: "0%",
+    opacity: 0,
+  },
+  {
+    drawSVG: "100%",
+    opacity: 1,
+    delay: 0.7,
+    duration: 1.5,
+    stagger: 0.02,
+    ease: CustomEase.create("custom", "M0,0,C0.396,0,-0.13,1,1,1"),
+  },
+  "-=0.7"
+);
+// tl.to(".letter", {
+//   opacity: 0,
+//   stagger: -0.02,
+//   duration: 0.5,
+//     ease: CustomEase.create("custom", "M0,0,C0.396,0,-0.13,1,1,1"),
+// });
+
 //TRIGGER CLI BOX UP AND DOWN
 // gsap.set(".cli-box", { yPercent: 100, opacity: 1 });
 // var tl = gsap.timeline({ paused: true, reversed: true });
@@ -93,8 +181,35 @@ function paragraphAnimation() {
 //   tl.reversed() ? tl.play() : tl.reverse();
 //   console.log("terminal animated");
 // });
+function loaderUp() {
+  gsap.to(".loader", {
+    duration: 1.4,
+    delay: 2,
+    yPercent: -100,
+    // ease: CustomEase.create("custom", "M0,0,C0.496,0.298,0,1,1,1"),
+    ease: CustomEase.create("custom", "M0,0 C0.782,0 0.324,1 1,1 "),
+    // onComplete: start,
+  });
+  gsap.to(".logo-header", {
+    duration: 0.2,
+    delay: 1.4,
+    yPercent: 200,
+    stagger: 0.3,
+    // ease: CustomEase.create("custom", "M0,0,C0.496,0.298,0,1,1,1"),
+    ease: CustomEase.create("custom", "M0,0 C0.782,0 0.324,1 1,1 "),
+    // onComplete: start,
+  });
+}
 
 getTitleHeight();
+getHeroHeight();
 
-gsap.delayedCall(0, titleAnimation);
-gsap.delayedCall(0, paragraphAnimation);
+function start() {
+  gsap.delayedCall(0, loaderUp);
+  gsap.delayedCall(0, heroAnimation);
+  gsap.delayedCall(0, titleAnimation);
+  gsap.delayedCall(0, paragraphAnimation);
+  console.log("animation starts");
+}
+
+start();
