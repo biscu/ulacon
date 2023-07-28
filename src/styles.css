@@ -17,6 +17,7 @@ html {
   --beige: #f9f9f9;
   --text-gray: #dadada;
   --accent-purple: #4c00ee;
+  --green: #079d5e;
   --gap: 3vw;
 }
 
@@ -53,6 +54,7 @@ html {
   width: 90vw;
   right: 0;
   left: 0;
+  height: 100svh;
   margin: 0 auto;
   color: var(--text-gray);
   mix-blend-mode: difference;
@@ -91,12 +93,16 @@ html {
   display: inline-block;
 }
 
+.hidden {
+  display: none;
+}
+
 .loader {
   /* background-color: var(--black); */
-  background-color: var(--accent-purple);
+  background-color: var(--black);
   position: fixed;
-
   width: 100%;
+  height: 100vh;
   height: 100svh;
   display: flex;
   align-items: center;
@@ -169,6 +175,15 @@ html {
   padding: 5vw 0 5vw 0;
 }
 
+.fixed {
+  position: sticky;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: -10;
+  height: 100svh;
+}
+
 .hero-container {
   padding-top: 12vw;
   display: grid;
@@ -200,6 +215,16 @@ html {
   padding: 2rem 0rem 2rem 0rem;
 }
 
+.service {
+  border-radius: 9999999px;
+  border: 4px solid var(--black);
+  padding-left: 5vw;
+  padding-right: 5vw;
+  display: inline-block;
+  margin-bottom: 3vw;
+  margin-right: 3vw;
+}
+
 .divider {
   height: 2px;
   width: 100%;
@@ -224,6 +249,10 @@ html {
 .bg-light {
   background-color: var(--beige);
   color: var(--black) !important;
+}
+.bg-green {
+  background-color: var(--green);
+  color: var(--beige) !important;
 }
 
 .bg-purple {
@@ -537,6 +566,7 @@ html {
 }
 body {
   margin: 0;
+  background-color: var(--beige);
 }
 
 /**

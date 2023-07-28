@@ -1,10 +1,10 @@
 console.log("animation file is connected");
 
-function getTitleHeight() {
-  title = document.querySelector(".h-animated");
-  titleHeight = title.offsetHeight;
-  console.log("h1 title is " + titleHeight + " px");
-}
+// function getTitleHeight() {
+//   title = document.querySelector(".h-animated");
+//   titleHeight = title.offsetHeight;
+//   console.log("h1 title is " + titleHeight + " px");
+// }
 function getHeroHeight() {
   hero = document.querySelector(".hero-animated");
   heroHeight = hero.offsetHeight;
@@ -200,8 +200,20 @@ function loaderUp() {
     // onComplete: start,
   });
 }
+// var heroFadeout = gsap.timeline();
+// heroFadeout.to(".hero-container", {
+//   yPercent: -70,
+//   opacity: 0,
+//   scrollTrigger: {
+//     trigger: ".trigger",
+//     markers: false,
+//     start: "top 105%",
+//     // end: "bottom -2s0%",
+//     scrub: 0.04,
+//   },
+// });
 
-getTitleHeight();
+// getTitleHeight();
 getHeroHeight();
 
 function start() {
