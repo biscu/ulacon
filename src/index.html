@@ -337,6 +337,7 @@
           type="text"
       /></span>
     </section> -->
+    <canvas class="threed" id="canvas3d"></canvas>
     <section class="bg-dark fixed">
       <div class="container hero-container">
         <h1 class="headingXl heading-hero hero-animated">
@@ -520,10 +521,12 @@
         // loader.classList.add("animation"); add animation after loader completed
       });
     </script> -->
-    <!-- <script
-      type="module"
-      src="https://unpkg.com/@splinetool/viewer@0.9.369/build/spline-viewer.js"
-    ></script> -->
+    <script type="module">
+      import { Application } from "./runtime.js";
+      const canvas = document.getElementById("canvas3d");
+      const app = new Application(canvas);
+      app.load("./scene.splinecode");
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/CustomEase.min.js"></script>
     <script src="js/DrawSVGPlugin.min.js"></script>

@@ -97,6 +97,13 @@ html {
   display: none;
 }
 
+.threed {
+  height: 400px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
 .loader {
   /* background-color: var(--black); */
   background-color: var(--black);
@@ -922,5 +929,12 @@ html.lenis {
 
   .logo-animated {
     width: 30vw;
+  }
+
+  .threed {
+    height: 300px !important;
+    position: absolute;
+    top: 30%;
+    bottom: 0;
   }
 }
