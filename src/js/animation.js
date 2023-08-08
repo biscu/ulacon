@@ -158,40 +158,7 @@ tl.fromTo(
   },
   "-=0.7"
 );
-// tl.to(".letter", {
-//   opacity: 0,
-//   stagger: -0.02,
-//   duration: 0.5,
-//     ease: CustomEase.create("custom", "M0,0,C0.396,0,-0.13,1,1,1"),
-// });
 
-//TRIGGER CLI BOX UP AND DOWN
-// gsap.set(".cli-box", { yPercent: 100, opacity: 1 });
-// var tl = gsap.timeline({ paused: true, reversed: true });
-// tl.to(".cli-box", {
-//   duration: 1,
-//   yPercent: 0,
-//   ease: CustomEase.create("custom", "M0,0,C0.496,0.298,0,1,1,1"),
-//   onComplete: terminal,
-// });
-
-// function allowBodyScroll() {
-//   var body = document.body;
-//   if (body.classList.contains("cantScroll")) {
-//     body.classList.remove("cantScroll");
-//   } else {
-//     body.classList.add("cantScroll");
-//   }
-// }
-
-// const cliButton = document.getElementById("cli-btn");
-// cliButton.addEventListener("click", () => {
-//   allowBodyScroll();
-//   // var delay = 800;
-//   // setTimeout(terminal, delay);
-//   tl.reversed() ? tl.play() : tl.reverse();
-//   console.log("terminal animated");
-// });
 function loaderUp() {
   gsap.to(".loader", {
     duration: 1.4,
@@ -212,6 +179,23 @@ function loaderUp() {
   });
 }
 
+function circleUp() {
+  gsap.set(".circle", { scale: 0 });
+  gsap.to(".circle", {
+    duration: 1,
+    scale: 20,
+    // ease: CustomEase.create("custom", "M0,0,C0.496,0.298,0,1,1,1"),
+    ease: CustomEase.create("custom", "M0,0 C0.782,0 0.324,1 1,1 "),
+    scrollTrigger: {
+      trigger: ".circle",
+      markers: true,
+      start: "bottom 80%",
+      end: "bottom 20%",
+      scrub: 0.05,
+    },
+  });
+}
+
 // getTitleHeight();
 getHeroHeight();
 
@@ -220,7 +204,33 @@ function start() {
   gsap.delayedCall(0, heroAnimation);
   gsap.delayedCall(0, titleAnimation);
   gsap.delayedCall(0, paragraphAnimation);
+  gsap.delayedCall(0, circleUp);
   console.log("animation starts");
 }
 
 start();
+
+//ANIMATION FOR SCRUMBLE TEXT
+
+// const landingText = ["connect", "evolve", "dominate"];
+// const masterTl = gsap.timeline({ repeat: -1 });
+// landingText.forEach((word) => {
+//   const tl = gsap.timeline({
+//     repeat: 1,
+//     yoyo: true,
+//     repeatDelay: 1,
+//     ease: "power2.inOut",
+//   });
+//   tl.to(".landing-text", {
+//     duration: 3,
+//     scrambleText: {
+//       text: word,
+//       chars: "!<>-_\\/[]{}—=+*^?#",
+//       //speed: 0.3,
+//       newClass: "accent--text",
+//       revealDelay: 0.5,
+//       tweenLength: false,
+//     },
+//   });
+//   masterTl.add(tl);
+// });
