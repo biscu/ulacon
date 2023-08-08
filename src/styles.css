@@ -217,7 +217,7 @@ html {
   gap: 8px;
 }
 .heading-hero {
-  font-size: clamp(40px, 52px, 64px) !important;
+  font-size: 3rem !important;
 }
 .service-title {
   padding-bottom: 32px;
@@ -347,7 +347,7 @@ html {
 
 .headingXl {
   line-height: 100%;
-  font-size: clamp(40px, 56px, 64px);
+  font-size: 3rem;
   letter-spacing: -0.04em;
 }
 .headingL {
@@ -1030,5 +1030,19 @@ html.lenis {
   .grid-row {
     display: grid;
     grid-template-columns: repeat(auto-fill, 100%);
+  }
+
+  .heading-hero {
+    font-size: 2rem !important;
+  }
+  .hero-container {
+    padding-top: 5vw;
+    height: 100svh;
+    margin: 0 1rem;
+    width: 100%;
+  }
+
+  .headingXl {
+    font-size: 2rem;
   }
 }
