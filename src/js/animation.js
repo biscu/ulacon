@@ -14,7 +14,6 @@ function getHeroHeight() {
 // Title
 function heroAnimation() {
   const targets = gsap.utils.toArray(".hero-animated");
-
   targets.forEach((target) => {
     let SplitClient = new SplitText(target, {
       type: "words",
@@ -32,13 +31,25 @@ function heroAnimation() {
       duration: 1.2,
       y: heroHeight,
       ease: CustomEase.create("custom", "M0,0,C0.496,0.298,0,1,1,1"),
-      stagger: 0.08,
+      stagger: 0.03,
       delay: 2.4,
       scrollTrigger: {
         trigger: target,
         markers: false,
         start: "top 100%",
         scrub: false,
+      },
+    });
+    gsap.to(words, {
+      duration: 1.8,
+      opacity: 0,
+      ease: CustomEase.create("custom", "M0,0,C0.496,0.298,0,1,1,1"),
+      stagger: -0.04,
+      scrollTrigger: {
+        trigger: target,
+        markers: false,
+        start: "bottom 50%",
+        scrub: true,
       },
     });
   });
@@ -200,18 +211,6 @@ function loaderUp() {
     // onComplete: start,
   });
 }
-// var heroFadeout = gsap.timeline();
-// heroFadeout.to(".hero-container", {
-//   yPercent: -70,
-//   opacity: 0,
-//   scrollTrigger: {
-//     trigger: ".trigger",
-//     markers: false,
-//     start: "top 105%",
-//     // end: "bottom -2s0%",
-//     scrub: 0.04,
-//   },
-// });
 
 // getTitleHeight();
 getHeroHeight();
