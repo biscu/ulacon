@@ -1074,4 +1074,8 @@ html.lenis {
   .headingXl {
     font-size: 2rem;
   }
+
+  .width-50 {
+    width: 100%;
+  }
 }
