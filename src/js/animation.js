@@ -191,7 +191,7 @@ function circleUp() {
       markers: true,
       start: "bottom 80%",
       end: "bottom 20%",
-      scrub: true,
+      scrub: 0.05,
     },
   });
 }
