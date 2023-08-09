@@ -1,10 +1,10 @@
 console.log("animation file is connected");
 
-// function getTitleHeight() {
-//   title = document.querySelector(".h-animated");
-//   titleHeight = title.offsetHeight;
-//   console.log("h1 title is " + titleHeight + " px");
-// }
+function getTitleHeight() {
+  title = document.querySelector(".h-animated");
+  titleHeight = title.offsetHeight;
+  console.log("h1 title is " + titleHeight + " px");
+}
 function getHeroHeight() {
   hero = document.querySelector(".hero-animated");
   heroHeight = hero.offsetHeight;
@@ -48,9 +48,15 @@ function heroAnimation() {
       scrollTrigger: {
         trigger: target,
         markers: false,
-        start: "bottom 50%",
+        start: "bottom 40%",
         scrub: true,
       },
+    });
+    gsap.from(".navbar", {
+      duration: 1.2,
+      yPercent: -100,
+      delay: 3.1,
+      ease: CustomEase.create("custom", "M0,0,C0.496,0.298,0,1,1,1"),
     });
   });
 }
@@ -75,7 +81,7 @@ function titleAnimation() {
       duration: 1.2,
       y: titleHeight,
       ease: CustomEase.create("custom", "M0,0,C0.496,0.298,0,1,1,1"),
-      stagger: 0.08,
+      stagger: 0.05,
       scrollTrigger: {
         trigger: target,
         markers: false,
@@ -88,7 +94,6 @@ function titleAnimation() {
 //paragraph
 function paragraphAnimation() {
   const targets = gsap.utils.toArray(".p-animated");
-
   targets.forEach((target) => {
     let SplitChild = new SplitText(target, {
       type: "lines",
@@ -106,6 +111,7 @@ function paragraphAnimation() {
       y: 50,
       ease: CustomEase.create("custom", "M0,0,C0.496,0.298,0,1,1,1"),
       stagger: 0.08,
+      delay: 0.5,
       scrollTrigger: {
         trigger: target,
         markers: false,
@@ -179,24 +185,23 @@ function loaderUp() {
   });
 }
 
-function circleUp() {
-  gsap.set(".circle", { scale: 0 });
-  gsap.to(".circle", {
-    duration: 1,
-    scale: 20,
-    // ease: CustomEase.create("custom", "M0,0,C0.496,0.298,0,1,1,1"),
-    ease: CustomEase.create("custom", "M0,0 C0.782,0 0.324,1 1,1 "),
-    scrollTrigger: {
-      trigger: ".circle",
-      markers: true,
-      start: "bottom 80%",
-      end: "bottom 20%",
-      scrub: 0.05,
-    },
-  });
-}
+// function circleUp() {
+//   gsap.to(".highlight .wordsParent:nth-child(16)", {
+//     duration: 1,
+//     width: 200,
+//     // ease: CustomEase.create("custom", "M0,0,C0.496,0.298,0,1,1,1"),
+//     ease: CustomEase.create("custom", "M0,0 C0.782,0 0.324,1 1,1 "),
+//     scrollTrigger: {
+//       trigger: ".highlight .wordsParent:nth-child(16)",
+//       markers: false,
+//       start: "bottom 80%",
+//       end: "bottom 20%",
+//       scrub: 0.05,
+//     },
+//   });
+// }
 
-// getTitleHeight();
+getTitleHeight();
 getHeroHeight();
 
 function start() {
@@ -204,7 +209,6 @@ function start() {
   gsap.delayedCall(0, heroAnimation);
   gsap.delayedCall(0, titleAnimation);
   gsap.delayedCall(0, paragraphAnimation);
-  gsap.delayedCall(0, circleUp);
   console.log("animation starts");
 }
 
