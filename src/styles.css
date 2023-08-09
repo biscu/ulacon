@@ -940,7 +940,11 @@ html.lenis {
 
   .client-list {
     width: 100%;
-    margin-bottom: 300px;
+  }
+
+  .py-180 {
+    padding-top: 64px;
+    padding-bottom: 64px;
   }
 
   .client-slit {
@@ -988,6 +992,7 @@ html.lenis {
 
   .client-header {
     flex-direction: column;
+    padding: 0px;
     gap: 24px;
   }
 }
