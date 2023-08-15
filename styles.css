@@ -119,21 +119,40 @@ body {
   overflow: hidden;
 }
 
+.marquee-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
 .marquee-row {
   white-space: nowrap;
   width: 100vw;
-  padding: 24px 0px 24px 0px;
   display: flex;
+  gap: 1px;
 }
 .marquee-row2 {
   white-space: nowrap;
   width: 100vw;
-  padding: 24px 0px 24px 0px;
   display: flex;
+  gap: 1px;
+}
+
+.marquee-row3 {
+  white-space: nowrap;
+  width: 100vw;
+  display: flex;
+  gap: 1px;
+}
+
+.marquee-fixed-height {
+  height: 360px;
 }
 
 .marquee {
   display: inline-block;
+  padding: 2rem;
+  outline: 1px solid var(--black);
 }
 
 .hidden {
@@ -597,6 +616,7 @@ body {
   }
   .name-image {
     margin: 0;
+    margin-top: 0.3rem;
   }
 
   .centered {

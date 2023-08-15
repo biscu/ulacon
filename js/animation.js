@@ -123,7 +123,7 @@ function paragraphAnimation() {
 
 var tl = gsap.timeline();
 tl.to(".marquee-row", {
-  xPercent: -50,
+  xPercent: -20,
   scrollTrigger: {
     trigger: ".marquee-row",
     markers: false,
@@ -133,11 +133,25 @@ tl.to(".marquee-row", {
   },
 });
 
-var tlMarqueeInverted = gsap.timeline();
-tlMarqueeInverted.to(".marquee-row2", {
-  xPercent: -70,
+var tlMarquee2 = gsap.timeline();
+tlMarquee2.to(".marquee-row2", {
+  xPercent: -25,
   scrollTrigger: {
+    fastScrollEnd: true,
     trigger: ".marquee-row2",
+    markers: false,
+    start: "top 100%",
+    end: "bottom -20%",
+    scrub: 0.05,
+  },
+});
+
+var tlMarquee3 = gsap.timeline();
+tlMarquee3.to(".marquee-row3", {
+  xPercent: -30,
+  scrollTrigger: {
+    fastScrollEnd: true,
+    trigger: ".marquee-row3",
     markers: false,
     start: "top 100%",
     end: "bottom -20%",
@@ -206,8 +220,8 @@ function scaleProfile() {
     scrollTrigger: {
       trigger: ".name-image",
       markers: false,
-      start: "bottom 90%",
-      end: "bottom 20%",
+      start: "top 100%",
+      end: "bottom 10%",
       scrub: 0.05,
     },
   });
