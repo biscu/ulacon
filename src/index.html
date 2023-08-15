@@ -38,6 +38,7 @@
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="utils.css" />
 
     <!-- Metadata Thumbnail -->
     <meta property="og:title" content="" />
@@ -51,10 +52,10 @@
     </style>
   </head>
   <body>
-    <div class="loader" id="loader">
+    <!-- <div class="loader" id="loader">
       <span class="text-light loader-logo">
         <span>Ulacon</span>
-        <!-- <svg
+        <svg
           class="logo-animated"
           height="auto"
           viewBox="0 0 506 104"
@@ -243,9 +244,9 @@
               </g>
             </g>
           </g>
-        </svg> -->
-      </span>
-    </div>
+        </svg>
+      </span
+    </div> -->
 
     <nav class="navbar">
       <div class="navbar-inner">
@@ -266,43 +267,50 @@
       </div>
     </section>
 
-    <!-- <section class="section bg-light py-80 border">
-      <div class="container grid-row col-6">
+    <section class="section bg-light py-80 border">
+      <div class="container flex gap-m">
         <div class="service span-2" data-scroll data-scroll-speed="0.3">
-          <h1 class="headingXl service-title s-animated">Cloud</h1>
-          <div class="service-image cloud">
+          <div class="service-image cloud"></div>
+          <div class="service-inner">
+            <h1 class="headingXl service-title s-animated">Cloud</h1>
+            <p class="service-paragraph">
+              We build systems that scales up seamlessly as your business grows,
+              whether it involves harnessing the power of Docker containers,
+              implementing a microservices architecture with lambdas,
+              event-driven systems, or a robust monolith.
+            </p>
           </div>
-          <p class="service-paragraph">
-            We build systems that scales up seamlessly as your business grows,
-            whether it involves harnessing the power of Docker containers,
-            implementing a microservices architecture with lambdas, event-driven
-            systems, or a robust monolith.
-          </p>
         </div>
         <div class="service span-2" data-scroll data-scroll-speed="0.4">
-          <h1 class="headingXl service-title s-animated">Devops</h1>
-          <div class="service-image devops">
+          <div class="service-image devops"></div>
+          <div class="service-inner">
+            <h1 class="headingXl service-title s-animated">Devops</h1>
+            <p class="service-paragraph">
+              We understand that accelerating your company's pace, optimizing
+              costs, and enhancing developer experiences are paramount. Fast
+              Continuous Integration and Continuous Deployment (CI/CD) pipelines
+              are instrumental in getting your software changes thoroughly
+              tested and taken to market swiftly, and reducing the risk of
+              errors in production.
+            </p>
           </div>
-          <p class="service-paragraph">
-            We build systems that scales up seamlessly as your business grows,
-            whether it involves harnessing the power of Docker containers,
-            implementing a microservices architecture with lambdas, event-driven
-            systems, or a robust monolith.
-          </p>
         </div>
         <div class="service span-2" data-scroll data-scroll-speed="0.5">
-          <h1 class="headingXl service-title s-animated">Fullstack</h1>
-          <div class="service-image fullstack">
+          <div class="service-image fullstack"></div>
+          <div class="service-inner">
+            <h1 class="headingXl service-title s-animated">Fullstack</h1>
+            <p class="service-paragraph">
+              Our proficiency in TypeScript, Node.js, and React.js empowers us
+              to create responsive and dynamic web applications that resonate
+              with your audience. Whether it's building from the ground up or
+              enhancing existing systems, we're committed to delivering
+              solutions that are robust, engaging, and designed to meet the
+              demands of today's fast-paced digital landscape.
+            </p>
           </div>
-          <p class="service-paragraph">
-            We build systems that scales up seamlessly as your business grows,
-            whether it involves harnessing the power of Docker containers,
-            implementing a microservices architecture with lambdas, event-driven
-            systems, or a robust monolith.
-          </p>
         </div>
       </div>
-    </section> -->
+    </section>
     <!-- <section class="section bg-purple overflown hidden">
       <div class="marquee-row">
         <h1 class="headingXl marquee">AWS</h1>
@@ -355,7 +363,7 @@
         <h1 class="headingXl marquee">AWS</h1>
       </div>
     </section> -->
-    <section class="section bg-light py-80">
+    <section class="section bg-light py-80 border">
       <div class="container">
         <div class="client-header">
           <h2 class="headingXl h-animated width-50">
@@ -405,17 +413,38 @@
     </section>
     <section class="section bg-light py-180">
       <div class="container">
-        <div class="client-header">
-          <h2 class="headingXl h-animated width-50">
-            We have worked with finest company that want to change the world
-          </h2>
-          <p class="paragraph p-animated width-50">
-            We believe that technology can revolutionize the way businesses
-            operate. Our team of expert consultants is committed to delivering
-            innovative solutions that can help your company stay ahead of the
-            curveto delivering innovative solutions that can help your company
-            stay ahead of the curve.
+        <div class="name-header">
+          <div class="name-wrapper mx-auto">
+            <h2 class="headingXl centered" style="font-size: 5rem">David</h2>
+            <img class="name-image mx-auto" src="assets/test-profile.jpg" />
+            <h2 class="headingXl centered mx-auto fix" style="font-size: 5rem">
+              Ulander
+            </h2>
+          </div>
+          <p class="paragraph width-50 centered mx-auto p-animated">
+            A 10 years experience developer mixed with dedication, curiosity and
+            pragmatism. A 10 years experience developer mixed with dedication,
+            curiosity and pragmatism. A 10 years experience developer mixed with
+            dedication, curiosity and pragmatism.
           </p>
+          <!-- <p class="paragraph p-animated width-50">
+            David's all about practical thinking and fixing things. Instead of
+            getting tangled up in details, he hones in on the main problem and
+            figures out simple first steps to solve it. He's genuinely excited
+            about making projects actually happen.
+          </p> -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section py-180">
+      <div class="container">
+        <div class="profile-wrap">
+          <div class="profile-text">
+            Ulacon AKA Davide Ulander Ulacon AKA Davide Ulander Ulacon AKA
+            Davide Ulander Ulacon AKA Davide Ulander Ulacon AKA Davide Ulander
+            Ulacon AKA Davide Ulander
+          </div>
         </div>
       </div>
     </section>

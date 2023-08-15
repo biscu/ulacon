@@ -185,21 +185,34 @@ function loaderUp() {
   });
 }
 
-// function circleUp() {
-//   gsap.to(".highlight .wordsParent:nth-child(16)", {
-//     duration: 1,
-//     width: 200,
-//     // ease: CustomEase.create("custom", "M0,0,C0.496,0.298,0,1,1,1"),
+// function profileColor() {
+//   gsap.to(".profile-text", {
+//     backgroundColor: "#000000",
 //     ease: CustomEase.create("custom", "M0,0 C0.782,0 0.324,1 1,1 "),
 //     scrollTrigger: {
-//       trigger: ".highlight .wordsParent:nth-child(16)",
+//       trigger: ".profile-text",
 //       markers: false,
-//       start: "bottom 80%",
+//       start: "top 100%",
 //       end: "bottom 20%",
 //       scrub: 0.05,
 //     },
 //   });
 // }
+
+function scaleProfile() {
+  gsap.to(".name-image", {
+    width: 250,
+    // ease: CustomEase.create("custom", "M0,0,C0.496,0.298,0,1,1,1"),
+    ease: CustomEase.create("custom", "M0,0 C0.782,0 0.324,1 1,1 "),
+    scrollTrigger: {
+      trigger: ".name-image",
+      markers: false,
+      start: "bottom 90%",
+      end: "bottom 20%",
+      scrub: 0.05,
+    },
+  });
+}
 
 getTitleHeight();
 getHeroHeight();
@@ -209,6 +222,8 @@ function start() {
   gsap.delayedCall(0, heroAnimation);
   gsap.delayedCall(0, titleAnimation);
   gsap.delayedCall(0, paragraphAnimation);
+  gsap.delayedCall(0, scaleProfile);
+  // gsap.delayedCall(0, profileColor);
   console.log("animation starts");
 }
 
