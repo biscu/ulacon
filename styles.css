@@ -9,6 +9,10 @@ html {
   font-size: 100%;
 }
 
+body {
+  padding-bottom: 500px;
+}
+
 :root {
   font-family: "CoolFont", sans-serif;
   font-weight: 400;
@@ -19,25 +23,6 @@ html {
   --accent-purple: #4c00ee;
   --green: #079d5e;
   --gap: 3vw;
-}
-
-.profile-wrap {
-  background-image: url("assets/test-profile.jpg");
-  background-size: cover;
-  background-position: center;
-  height: auto;
-}
-.profile-text {
-  background-color: #f7f7f7;
-  height: 500px;
-  align-items: end;
-  color: #01030c;
-  mix-blend-mode: lighten;
-  font-size: 4rem;
-  color: white; /* Fallback: assume this color ON TOP of image */
-  -webkit-background-clip: text; /* clip the background to the text inside the tag*/
-  -webkit-text-fill-color: transparent; /* make the text transparent so 
-                                          * the background shows through*/
 }
 
 .mx-auto {
@@ -92,7 +77,7 @@ html {
   color: var(--black);
   height: 80px;
   z-index: 9999;
-  background-color: #f9d987;
+  background-color: var(--beige);
 }
 
 .navbar-inner {

@@ -78,15 +78,14 @@ function titleAnimation() {
     let words = SplitParent.words; //an array of all the divs that wrap each character
     gsap.fromTo(".h-animated", { autoAlpha: 0 }, { autoAlpha: 1 });
     gsap.from(words, {
-      duration: 1.2,
+      duration: 1,
       y: titleHeight,
       ease: CustomEase.create("custom", "M0,0,C0.496,0.298,0,1,1,1"),
-      stagger: 0.05,
+      stagger: 0.04,
       scrollTrigger: {
         trigger: target,
-        markers: false,
+        markers: true,
         start: "top 100%",
-        scrub: false,
       },
     });
   });
@@ -201,7 +200,7 @@ function loaderUp() {
 
 function scaleProfile() {
   gsap.to(".name-image", {
-    width: 250,
+    width: 200,
     // ease: CustomEase.create("custom", "M0,0,C0.496,0.298,0,1,1,1"),
     ease: CustomEase.create("custom", "M0,0 C0.782,0 0.324,1 1,1 "),
     scrollTrigger: {
