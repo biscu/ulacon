@@ -4,6 +4,7 @@
     url("font/Aeonik-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 html {
   font-size: 100%;
