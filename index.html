@@ -256,7 +256,7 @@
       <div class="nav-divider"></div>
     </nav>
 
-    <section class="bg-light border">
+    <section class="bg-light">
       <div class="container">
         <div class="hero-container">
           <h1 class="headingXl heading-hero hero-animated">
@@ -267,10 +267,12 @@
       </div>
     </section>
 
-    <section class="section bg-light py-80 border">
+    <section class="section bg-light mb-80">
       <div class="container flex gap-m">
         <div class="service span-2" data-scroll data-scroll-speed="0.3">
-          <div class="service-image cloud"></div>
+          <div class="service-image-wrapper">
+            <img src="assets/cloud.svg" class="service-image" />
+          </div>
           <div class="service-inner">
             <h1 class="headingXl service-title s-animated">Cloud</h1>
             <p class="service-paragraph">
@@ -282,7 +284,9 @@
           </div>
         </div>
         <div class="service span-2" data-scroll data-scroll-speed="0.4">
-          <div class="service-image devops"></div>
+          <div class="service-image-wrapper">
+            <img src="assets/devops.svg" class="service-image" />
+          </div>
           <div class="service-inner">
             <h1 class="headingXl service-title s-animated">Devops</h1>
             <p class="service-paragraph">
@@ -296,7 +300,9 @@
           </div>
         </div>
         <div class="service span-2" data-scroll data-scroll-speed="0.5">
-          <div class="service-image fullstack"></div>
+          <div class="service-image-wrapper">
+            <img src="assets/backend.svg" class="service-image" />
+          </div>
           <div class="service-inner">
             <h1 class="headingXl service-title s-animated">Fullstack</h1>
             <p class="service-paragraph">
@@ -311,7 +317,7 @@
         </div>
       </div>
     </section>
-    <section class="section bg-light overflown marquee-fixed-height">
+    <section class="section bg-light overflown marquee-fixed-height mb-180">
       <div class="marquee-wrapper">
         <div class="marquee-row">
           <h1 class="headingXl marquee">Docker</h1>
@@ -360,7 +366,7 @@
         </div>
       </div>
     </section>
-    <section class="section bg-light py-80 border">
+    <section class="section bg-light border">
       <div class="container">
         <div class="client-header">
           <h2 class="headingXl h-animated width-50">
@@ -374,43 +380,37 @@
             stay ahead of the curve.
           </p>
         </div>
-        <div class="client-list">
+        <div id="clientList" class="client-list mb-180">
           <div class="client-item">
-            <img class="client-slit" src="assets/slit.svg" />
             <h2 class="headingXl">Klarna</h2>
-            <h2 class="headingXl">Postnord</h2>
+            <h2 class="headingXl secondary">Cloud</h2>
           </div>
           <div class="client-item">
-            <img class="client-slit" src="assets/slit.svg" />
             <h2 class="headingXl">Willa</h2>
-            <h2 class="headingXl">Service</h2>
+            <h2 class="headingXl secondary">Devops</h2>
           </div>
           <div class="client-item">
-            <img class="client-slit" src="assets/slit.svg" />
             <h2 class="headingXl">Netlight</h2>
-            <h2 class="headingXl">Service</h2>
+            <h2 class="headingXl secondary">Backend</h2>
           </div>
           <div class="client-item">
-            <img class="client-slit" src="assets/slit.svg" />
             <h2 class="headingXl">Insurely</h2>
-            <h2 class="headingXl">Service</h2>
+            <h2 class="headingXl secondary">Cloud</h2>
           </div>
           <div class="client-item">
-            <img class="client-slit" src="assets/slit.svg" />
             <h2 class="headingXl">Infocentric</h2>
-            <h2 class="headingXl">Service</h2>
+            <h2 class="headingXl secondary">Devops</h2>
           </div>
           <div class="client-item">
-            <img class="client-slit" src="assets/slit.svg" />
             <h2 class="headingXl">Swace</h2>
-            <h2 class="headingXl">Service</h2>
+            <h2 class="headingXl secondary">Cloud</h2>
           </div>
         </div>
       </div>
     </section>
-    <section class="section bg-light py-180">
+    <section class="section bg-light pb-180 border">
       <div class="container">
-        <div class="name-header">
+        <div class="name-header mt-180">
           <div class="name-wrapper mx-auto">
             <h2 class="headingXl centered" style="font-size: 5rem">David</h2>
             <img class="name-image mx-auto" src="assets/test-profile.jpg" />
@@ -419,10 +419,10 @@
             </h2>
           </div>
           <p class="paragraph width-50 centered mx-auto p-animated">
-            A 10 years experience developer mixed with dedication, curiosity and
-            pragmatism. A 10 years experience developer mixed with dedication,
-            curiosity and pragmatism. A 10 years experience developer mixed with
-            dedication, curiosity and pragmatism.
+            David's all about practical thinking and fixing things. Instead of
+            getting tangled up in details, he hones in on the main problem and
+            figures out simple first steps to solve it. He's genuinely excited
+            about making projects actually happen.
           </p>
           <!-- <p class="paragraph p-animated width-50">
             David's all about practical thinking and fixing things. Instead of
@@ -433,7 +433,33 @@
         </div>
       </div>
     </section>
-    <section class="section border"></section>
+    <section class="section border">
+      <div class="container">
+        <div class="step-wrapper">
+          <div class="step-item">
+            <h2 class="step-number">1</h2>
+            <h2 class="headingXl">
+              We help you know which problem you ought to solve by breaking it
+              down to smaller pieces.
+            </h2>
+          </div>
+          <div class="step-item">
+            <h2 class="step-number">2</h2>
+            <h2 class="headingXl">
+              We identify practicals steps to achieve a desired solution,
+              actively contributing and working alongside your team.
+            </h2>
+          </div>
+          <div class="step-item">
+            <h2 class="step-number">3</h2>
+            <h2 class="headingXl">
+              We build solutions that align with the business goals, recognizing
+              customer’s need and empower the journey. 
+            </h2>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- <section class="section bg-dark">
       <div
         class="container"

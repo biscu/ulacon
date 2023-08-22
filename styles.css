@@ -146,7 +146,7 @@ body {
 }
 
 .marquee-fixed-height {
-  height: 360px;
+  padding: 1rem 0 1rem 0;
 }
 
 .marquee {
@@ -243,6 +243,10 @@ body {
   font-size: 3rem !important;
 }
 
+.service-paragraph {
+  font-size: 1.25rem;
+}
+
 .service {
   border: 1px solid var(--black);
   padding-top: 0px;
@@ -255,28 +259,33 @@ body {
   padding: 2rem;
 }
 
-.service-image {
-  height: 200px;
+.service-image-wrapper {
+  min-height: 150px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
   border-bottom: 1px solid var(--black);
-  margin-left: -32px;
-  margin-right: -32px;
+  padding: 2rem;
   align-items: center;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
+.service-image {
+  width: 100%;
+}
+
 .devops {
-  background-image: url("assets/service-devops.svg");
+  background-image: url("assets/devops.svg");
 }
 
 .cloud {
-  background-image: url("assets/service-cloud.svg");
+  background-image: url("assets/cloud.svg");
 }
 
 .fullstack {
-  background-image: url("assets/service-fullstack.svg");
+  background-image: url("assets/backend.svg");
 }
 
 .divider {
@@ -328,13 +337,6 @@ body {
 
 .client-list {
   width: 100%;
-  padding-top: 80px;
-}
-
-.client-slit {
-  position: absolute;
-  top: -25px;
-  left: 10px;
 }
 
 .relative {
@@ -343,24 +345,31 @@ body {
 
 .client-item {
   position: relative;
+  opacity: 1;
   display: flex;
   justify-content: space-between;
   background-color: var(--beige);
-  border: 1px solid var(--black);
-  padding: 48px;
-  padding-left: 164px;
-  margin-top: -64px;
-  transition: transform 0.3s ease;
+  outline: 1px solid var(--black);
+  padding: 3rem;
+  margin: 0 auto;
+  width: 600px;
 }
 
-.client-item:hover {
-  transform: translateY(-50px);
-  transition: transform 0.5s ease;
+.step-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--beige);
+  outline: 1px solid var(--black);
+  gap: 4rem;
+  position: relative;
+  padding: 3rem;
+  margin: 0 auto;
 }
 
-.client-item:last-child:hover {
-  transform: translateY(0px);
-  transition: transform 0.5s ease;
+.step-number {
+  font-size: 8rem;
+  line-height: 0px;
 }
 
 .text-light {
@@ -402,12 +411,28 @@ body {
   overflow: hidden;
 }
 
-.py-80 {
-  padding: 80px 0px 80px 0px;
+.mb-80 {
+  margin-bottom: 80px;
 }
 
-.py-180 {
-  padding: 180px 0px 180px 0px;
+.mt-80 {
+  margin-top: 80px;
+}
+
+.mb-180 {
+  margin-bottom: 180px;
+}
+
+.mt-180 {
+  margin-top: 180px;
+}
+
+.pb-180 {
+  padding-bottom: 180px;
+}
+
+.pt-180 {
+  padding-top: 180px;
 }
 
 .width-50 {
@@ -446,6 +471,10 @@ body {
 
 .image-hero {
   transform: scale(1.5);
+}
+
+.secondary {
+  color: var(--text-gray);
 }
 
 .headingXl {
@@ -552,6 +581,8 @@ body {
     padding: 32px;
     margin-top: -32px;
     transition: transform 0.3s ease;
+    margin: 0 auto;
+    width: 200px;
   }
 
   .grid-row {

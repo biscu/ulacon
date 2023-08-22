@@ -123,7 +123,7 @@ function paragraphAnimation() {
 
 var tl = gsap.timeline();
 tl.to(".marquee-row", {
-  xPercent: -20,
+  xPercent: -10,
   scrollTrigger: {
     trigger: ".marquee-row",
     markers: false,
@@ -135,7 +135,7 @@ tl.to(".marquee-row", {
 
 var tlMarquee2 = gsap.timeline();
 tlMarquee2.to(".marquee-row2", {
-  xPercent: -25,
+  xPercent: -15,
   scrollTrigger: {
     fastScrollEnd: true,
     trigger: ".marquee-row2",
@@ -148,7 +148,7 @@ tlMarquee2.to(".marquee-row2", {
 
 var tlMarquee3 = gsap.timeline();
 tlMarquee3.to(".marquee-row3", {
-  xPercent: -30,
+  xPercent: -20,
   scrollTrigger: {
     fastScrollEnd: true,
     trigger: ".marquee-row3",
@@ -157,6 +157,25 @@ tlMarquee3.to(".marquee-row3", {
     end: "bottom -20%",
     scrub: 0.05,
   },
+});
+
+var clientList = document.getElementById("clientList").offsetWidth;
+console.log(clientList);
+
+ScrollTrigger.batch(".client-item", {
+  onEnter: (batch) =>
+    gsap.to(batch, {
+      width: clientList - 32,
+      duration: 1,
+      ease: CustomEase.create("custom", "M0,0,C0.396,0,-0.13,1,1,1"),
+      scrollTrigger: {
+        trigger: batch,
+        markers: false,
+        start: "top 120%",
+        end: "bottom 0%",
+        scrub: 0.01,
+      },
+    }),
 });
 
 var tl = gsap.timeline({});
