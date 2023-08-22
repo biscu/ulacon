@@ -84,7 +84,7 @@ function titleAnimation() {
       stagger: 0.04,
       scrollTrigger: {
         trigger: target,
-        markers: true,
+        markers: false,
         start: "top 100%",
       },
     });
