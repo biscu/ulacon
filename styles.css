@@ -410,6 +410,14 @@ html {
   transition: 0.2s ease-in-out;
 }
 
+.version-tag {
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: #beff55;
+  border-radius: 99999px;
+}
+
 .step-item {
   display: flex;
   justify-content: flex-start;
