@@ -45,7 +45,7 @@ html {
 }
 
 .morph-wrapper {
-  width: 300px;
+  width: 200px;
   height: auto;
   outline: 1px solid var(--black);
 }
@@ -438,10 +438,14 @@ html {
   justify-content: center;
 }
 
+.step-inner {
+  width: 100%;
+}
+
 .step-text-wrapper {
   outline: 1px solid var(--black);
   padding: 3rem;
-  position: relative;
+  width: 100%;
 }
 
 .step-number {
