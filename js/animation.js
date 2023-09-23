@@ -11,6 +11,102 @@ function getHeroHeight() {
   console.log("h1 title is " + heroHeight + " px");
 }
 
+const ease = CustomEase.create("custom", "M0,0,C0.496,0.298,0,1,1,1");
+
+function morph() {
+  var tl = gsap.timeline();
+  tl.to("#step1a", {
+    morphSVG: "#step2a",
+    ease: ease,
+    scrollTrigger: {
+      trigger: ".step1",
+      markers: true,
+      scrub: true,
+      start: "top 80%",
+      end: "bottom 80%",
+    },
+  });
+  tl.to("#step1b", {
+    morphSVG: "#step2b",
+    ease: ease,
+    scrollTrigger: {
+      trigger: ".step1",
+      markers: true,
+      scrub: true,
+      start: "top 80%",
+      end: "bottom 80%",
+    },
+  });
+  tl.to("#step1c", {
+    morphSVG: "#step2c",
+    ease: ease,
+    scrollTrigger: {
+      trigger: ".step1",
+      markers: true,
+      scrub: true,
+      start: "top 80%",
+      end: "bottom 80%",
+    },
+  });
+
+  tl.fromTo(
+    "#step1a",
+    {
+      morphSVG: "#step2a",
+    },
+    {
+      morphSVG: "#step3a",
+      ease: ease,
+      immediateRender: false,
+      scrollTrigger: {
+        trigger: ".step2",
+        markers: true,
+        scrub: true,
+        start: "top 80%",
+        end: "bottom 80%",
+      },
+    }
+  );
+
+  tl.fromTo(
+    "#step1b",
+    {
+      morphSVG: "#step2b",
+    },
+    {
+      morphSVG: "#step3b",
+      ease: ease,
+      immediateRender: false,
+      scrollTrigger: {
+        trigger: ".step2",
+        markers: true,
+        scrub: true,
+        start: "top 80%",
+        end: "bottom 80%",
+      },
+    }
+  );
+
+  tl.fromTo(
+    "#step1c",
+    {
+      morphSVG: "#step2c",
+    },
+    {
+      morphSVG: "#step3c",
+      ease: ease,
+      immediateRender: false,
+      scrollTrigger: {
+        trigger: ".step2",
+        markers: true,
+        scrub: true,
+        start: "top 80%",
+        end: "bottom 80%",
+      },
+    }
+  );
+}
+
 // Title
 function heroAnimation() {
   const targets = gsap.utils.toArray(".hero-animated");
@@ -30,7 +126,7 @@ function heroAnimation() {
     gsap.from(words, {
       duration: 1.2,
       y: heroHeight,
-      ease: CustomEase.create("custom", "M0,0,C0.496,0.298,0,1,1,1"),
+      ease: ease,
       stagger: 0.03,
       delay: 2.4,
       scrollTrigger: {
@@ -43,7 +139,7 @@ function heroAnimation() {
     gsap.to(words, {
       duration: 1.8,
       opacity: 0,
-      ease: CustomEase.create("custom", "M0,0,C0.496,0.298,0,1,1,1"),
+      ease: ease,
       stagger: -0.04,
       scrollTrigger: {
         trigger: target,
@@ -56,7 +152,7 @@ function heroAnimation() {
       duration: 1.2,
       yPercent: -100,
       delay: 3.1,
-      ease: CustomEase.create("custom", "M0,0,C0.496,0.298,0,1,1,1"),
+      ease: ease,
     });
   });
 }
@@ -80,7 +176,7 @@ function titleAnimation() {
     gsap.from(words, {
       duration: 1,
       y: titleHeight,
-      ease: CustomEase.create("custom", "M0,0,C0.496,0.298,0,1,1,1"),
+      ease: ease,
       stagger: 0.04,
       scrollTrigger: {
         trigger: target,
@@ -108,9 +204,9 @@ function paragraphAnimation() {
       opacity: 0,
       duration: 1.2,
       y: 50,
-      ease: CustomEase.create("custom", "M0,0,C0.496,0.298,0,1,1,1"),
+      ease: ease,
       stagger: 0.08,
-      delay: 0.5,
+      delay: 0.3,
       scrollTrigger: {
         trigger: target,
         markers: false,
@@ -162,21 +258,21 @@ tlMarquee3.to(".marquee-row3", {
 var clientList = document.getElementById("clientList").offsetWidth;
 console.log(clientList);
 
-ScrollTrigger.batch(".client-item", {
-  onEnter: (batch) =>
-    gsap.to(batch, {
-      width: clientList - 32,
-      duration: 1,
-      ease: CustomEase.create("custom", "M0,0,C0.396,0,-0.13,1,1,1"),
-      scrollTrigger: {
-        trigger: batch,
-        markers: false,
-        start: "top 120%",
-        end: "bottom 0%",
-        scrub: 0.01,
-      },
-    }),
-});
+// ScrollTrigger.batch(".client-item", {
+//   onEnter: (batch) =>
+//     gsap.to(batch, {
+//       width: "90%",
+//       duration: 1,
+//       ease: CustomEase.create("custom", "M0,0,C0.396,0,-0.13,1,1,1"),
+//       scrollTrigger: {
+//         trigger: batch,
+//         markers: false,
+//         start: "top 120%",
+//         end: "bottom 0%",
+//         scrub: 0.01,
+//       },
+//     }),
+// });
 
 var tl = gsap.timeline({});
 gsap.fromTo(".logo-animated", { autoAlpha: 0 }, { autoAlpha: 1 });
@@ -202,7 +298,7 @@ function loaderUp() {
     duration: 1.4,
     delay: 2,
     yPercent: -100,
-    // ease: CustomEase.create("custom", "M0,0,C0.496,0.298,0,1,1,1"),
+    // ease: ease,
     ease: CustomEase.create("custom", "M0,0 C0.782,0 0.324,1 1,1 "),
     // onComplete: start,
   });
@@ -211,7 +307,7 @@ function loaderUp() {
     delay: 1.4,
     yPercent: 200,
     stagger: 0.3,
-    // ease: CustomEase.create("custom", "M0,0,C0.496,0.298,0,1,1,1"),
+    // ease: ease,
     ease: CustomEase.create("custom", "M0,0 C0.782,0 0.324,1 1,1 "),
     // onComplete: start,
   });
@@ -233,16 +329,87 @@ function loaderUp() {
 
 function scaleProfile() {
   gsap.to(".name-image", {
-    width: 200,
-    // ease: CustomEase.create("custom", "M0,0,C0.496,0.298,0,1,1,1"),
+    scale: 1.4,
+    stagger: 0.1,
+    // ease: ease,
     ease: CustomEase.create("custom", "M0,0 C0.782,0 0.324,1 1,1 "),
     scrollTrigger: {
       trigger: ".name-image",
       markers: false,
       start: "top 100%",
-      end: "bottom 10%",
+      end: "bottom 40%",
       scrub: 0.05,
     },
+  });
+  gsap.to(".name-left", {
+    translateX: -20,
+    // ease: ease,
+    ease: CustomEase.create("custom", "M0,0 C0.782,0 0.324,1 1,1 "),
+    scrollTrigger: {
+      trigger: ".name-image",
+      markers: false,
+      start: "top 100%",
+      end: "bottom 40%",
+      scrub: 0.05,
+    },
+  });
+  gsap.to(".name-right", {
+    translateX: 20,
+    // ease: ease,
+    ease: CustomEase.create("custom", "M0,0 C0.782,0 0.324,1 1,1 "),
+    scrollTrigger: {
+      trigger: ".name-image",
+      markers: false,
+      start: "top 100%",
+      end: "bottom 40%",
+      scrub: 0.05,
+    },
+  });
+}
+
+function perpsectiveText() {
+  const text = gsap.utils.toArray(".mission");
+  text.forEach((text) => {
+    // let SplitClient = new SplitText(text, {
+    //   type: "words",
+    //   wordsClass: "wordsParent",
+    //   // charsClass: "charsParent",
+    // });
+    // let SplitParent = new SplitText(text, {
+    //   type: "words",
+    //   wordsClass: "wordsChild",
+    //   // charsClass: "charsChild",
+    // });
+    let SplitClient = new SplitText(text, {
+      type: "chars",
+      wordsClass: "wordsParent",
+      // charsClass: "charsParent",
+    });
+    let SplitParent = new SplitText(text, {
+      type: "chars",
+      wordsClass: "wordsChild",
+      // charsClass: "charsChild",
+    });
+    let chars = SplitParent.chars; //an array of all the divs that wrap each character
+    gsap.fromTo(
+      chars,
+      {
+        "will-change": "opacity, transform",
+        opacity: 0,
+      },
+      {
+        ease: CustomEase.create("custom", "M0,0 C0.782,0 0.324,1 1,1 "),
+        opacity: 1,
+        rotationX: 0,
+        stagger: 0.01,
+        scrollTrigger: {
+          trigger: ".mission",
+          start: "top 100%",
+          end: "bottom center-=10%",
+          scrub: 0.5,
+        },
+      }
+    );
   });
 }
 
@@ -255,6 +422,9 @@ function start() {
   gsap.delayedCall(0, titleAnimation);
   gsap.delayedCall(0, paragraphAnimation);
   gsap.delayedCall(0, scaleProfile);
+  gsap.delayedCall(0, perpsectiveText);
+  gsap.delayedCall(0, morph);
+
   // gsap.delayedCall(0, profileColor);
   console.log("animation starts");
 }
