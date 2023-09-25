@@ -101,7 +101,6 @@ html {
 }
 body {
   margin: 0;
-  background-color: var(--beige);
 }
 
 /**
@@ -145,6 +144,7 @@ pre {
 
 a {
   background-color: transparent;
+  text-decoration: none;
 }
 
 /**

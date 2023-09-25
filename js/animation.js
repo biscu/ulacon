@@ -157,6 +157,23 @@ function heroAnimation() {
   });
 }
 
+function slide() {
+  const target = gsap.utils.toArray(".service-image-wrapper");
+  target.forEach((target) => {
+    gsap.from(target, {
+      xPercent: -60,
+      ease: ease,
+      stagger: 0.04,
+      scrollTrigger: {
+        trigger: target,
+        markers: false,
+        start: "top 100%",
+        scrub: true,
+      },
+    });
+  });
+}
+
 function titleAnimation() {
   const targets = gsap.utils.toArray(".h-animated");
 
@@ -332,37 +349,58 @@ function scaleProfile() {
     scale: 1.4,
     stagger: 0.1,
     // ease: ease,
-    ease: CustomEase.create("custom", "M0,0 C0.782,0 0.324,1 1,1 "),
+    ease: ease,
     scrollTrigger: {
       trigger: ".name-image",
       markers: false,
-      start: "top 100%",
-      end: "bottom 40%",
-      scrub: 0.05,
+      start: "top 80%",
+      end: "top 50%",
+      scrub: false,
+    },
+  });
+  gsap.to(".target", {
+    opacity: 1,
+    duration: 0.5,
+    ease: ease,
+    scrollTrigger: {
+      trigger: ".target",
+      markers: false,
+      start: "top 80%",
+      scrub: false,
+    },
+  });
+  gsap.to(".target", {
+    scale: 1.6,
+    rotation: 0,
+    duration: 0.8,
+    ease: ease,
+    scrollTrigger: {
+      trigger: ".target",
+      markers: false,
+      start: "top 80%",
+      scrub: false,
     },
   });
   gsap.to(".name-left", {
     translateX: -20,
-    // ease: ease,
-    ease: CustomEase.create("custom", "M0,0 C0.782,0 0.324,1 1,1 "),
+    ease: ease,
     scrollTrigger: {
       trigger: ".name-image",
       markers: false,
-      start: "top 100%",
-      end: "bottom 40%",
-      scrub: 0.05,
+      start: "top 90%",
+      end: "top 50%",
+      scrub: false,
     },
   });
   gsap.to(".name-right", {
     translateX: 20,
-    // ease: ease,
-    ease: CustomEase.create("custom", "M0,0 C0.782,0 0.324,1 1,1 "),
+    ease: ease,
     scrollTrigger: {
       trigger: ".name-image",
       markers: false,
-      start: "top 100%",
-      end: "bottom 40%",
-      scrub: 0.05,
+      start: "top 90%",
+      end: "top 50%",
+      scrub: false,
     },
   });
 }
@@ -424,6 +462,7 @@ function start() {
   gsap.delayedCall(0, scaleProfile);
   gsap.delayedCall(0, perpsectiveText);
   gsap.delayedCall(0, morph);
+  gsap.delayedCall(0, slide);
 
   // gsap.delayedCall(0, profileColor);
   console.log("animation starts");
