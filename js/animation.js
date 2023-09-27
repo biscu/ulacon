@@ -154,22 +154,13 @@ function heroAnimation() {
       delay: 3.1,
       ease: ease,
     });
-  });
-}
-
-function slide() {
-  const target = gsap.utils.toArray(".service-image-wrapper");
-  target.forEach((target) => {
-    gsap.from(target, {
-      xPercent: -60,
+    gsap.to(".service", {
+      y: 0,
+      opacity: 1,
+      duration: 1.2,
+      delay: 3.1,
       ease: ease,
-      stagger: 0.04,
-      scrollTrigger: {
-        trigger: target,
-        markers: false,
-        start: "top 100%",
-        scrub: true,
-      },
+      stagger: 0.1,
     });
   });
 }
@@ -347,14 +338,12 @@ function loaderUp() {
 function scaleProfile() {
   gsap.to(".name-image", {
     scale: 1.4,
-    stagger: 0.1,
-    // ease: ease,
+    duration: 1.2,
     ease: ease,
     scrollTrigger: {
       trigger: ".name-image",
       markers: false,
-      start: "top 80%",
-      end: "top 50%",
+      start: "top 90%",
       scrub: false,
     },
   });
@@ -381,8 +370,20 @@ function scaleProfile() {
       scrub: false,
     },
   });
+  gsap.to(".target-tag", {
+    clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+    duration: 0.8,
+    ease: ease,
+    scrollTrigger: {
+      trigger: ".target",
+      markers: false,
+      start: "top 80%",
+      scrub: false,
+    },
+  });
   gsap.to(".name-left", {
     translateX: -20,
+    duration: 1.2,
     ease: ease,
     scrollTrigger: {
       trigger: ".name-image",
@@ -394,6 +395,7 @@ function scaleProfile() {
   });
   gsap.to(".name-right", {
     translateX: 20,
+    duration: 1.2,
     ease: ease,
     scrollTrigger: {
       trigger: ".name-image",
@@ -462,7 +464,6 @@ function start() {
   gsap.delayedCall(0, scaleProfile);
   gsap.delayedCall(0, perpsectiveText);
   gsap.delayedCall(0, morph);
-  gsap.delayedCall(0, slide);
 
   // gsap.delayedCall(0, profileColor);
   console.log("animation starts");

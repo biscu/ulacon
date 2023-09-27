@@ -61,7 +61,8 @@
   <body>
     <div class="loader" id="loader">
       <span class="text-light loader-logo">
-        <span>Ulacon</span>
+        <!-- <span>Ulacon</span> -->
+        <img class="loader-logo" src="assets/loader-logo.svg" />
         <!-- <svg
           class="logo-animated"
           height="auto"
@@ -275,32 +276,29 @@
       </div>
     </section>
 
-    <section class="section bg-light mb-80">
+    <section class="section bg-light mb-80 sh">
       <div class="container service-wrapper">
         <div class="service span-2">
-          <div class="service-inner">
-            <h1 class="headingXl service-title s-animated">Cloud</h1>
-            <p class="service-paragraph">
+          <div class="service-inner relative">
+            <div class="service-icon-wrapper">
+              <img src="assets/cloud-icon.svg" />
+            </div>
+            <h1 class="headingL service-title s-animated">Cloud</h1>
+            <p class="service-paragraph secondary">
               We build systems that scales up seamlessly as your business grows,
               whether it involves harnessing the power of Docker containers,
               implementing a microservices architecture with lambdas,
               event-driven systems, or a robust monolith.
             </p>
           </div>
-          <div class="service-image-wrapper">
-            <img
-              src="assets/cloud.svg"
-              class="service-image"
-              alt="cloud abstract shape"
-              width="302"
-              height="137"
-            />
-          </div>
         </div>
         <div class="service span-2">
           <div class="service-inner">
-            <h1 class="headingXl service-title s-animated">Devops</h1>
-            <p class="service-paragraph">
+            <div class="service-icon-wrapper">
+              <img src="assets/devops-icon.svg" />
+            </div>
+            <h1 class="headingL service-title s-animated">Devops</h1>
+            <p class="service-paragraph secondary">
               We understand that accelerating your company's pace, optimizing
               costs, and enhancing developer experiences are paramount. Fast
               Continuous Integration and Continuous Deployment (CI/CD) pipelines
@@ -309,20 +307,14 @@
               errors in production.
             </p>
           </div>
-          <div class="service-image-wrapper">
-            <img
-              src="assets/devops.svg"
-              class="service-image"
-              alt="devops abstract shape"
-              width="302"
-              height="137"
-            />
-          </div>
         </div>
         <div class="service span-2">
           <div class="service-inner">
-            <h1 class="headingXl service-title s-animated">Fullstack</h1>
-            <p class="service-paragraph">
+            <div class="service-icon-wrapper">
+              <img src="assets/fullstack-icon.svg" />
+            </div>
+            <h1 class="headingL service-title s-animated">Fullstack</h1>
+            <p class="service-paragraph secondary">
               Our proficiency in TypeScript, Node.js, and React.js empowers us
               to create responsive and dynamic web applications that resonate
               with your audience. Whether it's building from the ground up or
@@ -331,20 +323,11 @@
               demands of today's fast-paced digital landscape.
             </p>
           </div>
-          <div class="service-image-wrapper">
-            <img
-              src="assets/backend.svg"
-              class="service-image"
-              alt="fullstack abstract shape"
-              width="302"
-              height="137"
-            />
-          </div>
         </div>
       </div>
     </section>
 
-    <section class="section bg-light overflown marquee-fixed-height mb-180">
+    <!-- <section class="section bg-light overflown marquee-fixed-height mb-180">
       <div class="marquee-wrapper">
         <div class="marquee-row">
           <h1 class="headingXl marquee">Docker</h1>
@@ -392,7 +375,7 @@
           <h1 class="headingXl marquee">AWS</h1>
         </div>
       </div>
-    </section>
+    </section> -->
     <section class="section bg-light">
       <div class="container">
         <div class="client-header">
@@ -443,7 +426,9 @@
               David
             </h2>
             <div class="target-image-wrapper relative">
-              <div class="target"></div>
+              <div class="target">
+                <div class="target-tag">Human</div>
+              </div>
               <img
                 class="name-image mx-auto"
                 src="assets/david-profile.png"
