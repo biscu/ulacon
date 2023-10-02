@@ -10,6 +10,9 @@ function getHeroHeight() {
   heroHeight = hero.offsetHeight;
   console.log("h1 title is " + heroHeight + " px");
 }
+step = document.querySelector(".step-wrapper");
+stepHeight = step.offsetHeight;
+console.log("step wrapper " + stepHeight + " px");
 
 const ease = CustomEase.create("custom", "M0,0,C0.496,0.298,0,1,1,1");
 
@@ -20,10 +23,10 @@ function morph() {
     ease: ease,
     scrollTrigger: {
       trigger: ".step1",
-      markers: true,
+      markers: false,
       scrub: true,
-      start: "top 80%",
-      end: "bottom 80%",
+      start: "top 30%",
+      end: "bottom 50%",
     },
   });
   tl.to("#step1b", {
@@ -31,10 +34,10 @@ function morph() {
     ease: ease,
     scrollTrigger: {
       trigger: ".step1",
-      markers: true,
+      markers: false,
       scrub: true,
-      start: "top 80%",
-      end: "bottom 80%",
+      start: "top 30%",
+      end: "bottom 50%",
     },
   });
   tl.to("#step1c", {
@@ -42,10 +45,10 @@ function morph() {
     ease: ease,
     scrollTrigger: {
       trigger: ".step1",
-      markers: true,
+      markers: false,
       scrub: true,
-      start: "top 80%",
-      end: "bottom 80%",
+      start: "top 30%",
+      end: "bottom 50%",
     },
   });
 
@@ -60,10 +63,10 @@ function morph() {
       immediateRender: false,
       scrollTrigger: {
         trigger: ".step2",
-        markers: true,
+        markers: false,
         scrub: true,
-        start: "top 80%",
-        end: "bottom 80%",
+        start: "top 30%",
+        end: "bottom 50%",
       },
     }
   );
@@ -79,10 +82,10 @@ function morph() {
       immediateRender: false,
       scrollTrigger: {
         trigger: ".step2",
-        markers: true,
+        markers: false,
         scrub: true,
-        start: "top 80%",
-        end: "bottom 80%",
+        start: "top 30%",
+        end: "bottom 50%",
       },
     }
   );
@@ -98,10 +101,66 @@ function morph() {
       immediateRender: false,
       scrollTrigger: {
         trigger: ".step2",
-        markers: true,
+        markers: false,
         scrub: true,
-        start: "top 80%",
-        end: "bottom 80%",
+        start: "top 30%",
+        end: "bottom 50%",
+      },
+    }
+  );
+
+  tl.fromTo(
+    "#step1a",
+    {
+      morphSVG: "#step3a",
+    },
+    {
+      morphSVG: "#step4a",
+      ease: ease,
+      immediateRender: false,
+      scrollTrigger: {
+        trigger: ".step3",
+        markers: false,
+        scrub: true,
+        start: "top 30%",
+        end: "bottom 50%",
+      },
+    }
+  );
+
+  tl.fromTo(
+    "#step1b",
+    {
+      morphSVG: "#step3b",
+    },
+    {
+      morphSVG: "#step4b",
+      ease: ease,
+      immediateRender: false,
+      scrollTrigger: {
+        trigger: ".step3",
+        markers: false,
+        scrub: true,
+        start: "top 30%",
+        end: "bottom 50%",
+      },
+    }
+  );
+  tl.fromTo(
+    "#step1c",
+    {
+      morphSVG: "#step3c",
+    },
+    {
+      morphSVG: "#step4c",
+      ease: ease,
+      immediateRender: false,
+      scrollTrigger: {
+        trigger: ".step3",
+        markers: false,
+        scrub: true,
+        start: "top 30%",
+        end: "bottom 50%",
       },
     }
   );
@@ -192,6 +251,20 @@ function titleAnimation() {
         start: "top 100%",
       },
     });
+  });
+}
+
+function animateClients() {
+  gsap.to(".client-item", {
+    y: 0,
+    opacity: 1,
+    duration: 1.2,
+    ease: ease,
+    stagger: 0.05,
+    scrollTrigger: {
+      trigger: ".client-item",
+      start: "top 100%",
+    },
   });
 }
 //paragraph
@@ -453,6 +526,17 @@ function perpsectiveText() {
   });
 }
 
+// gsap.to(".step-header", {
+//   scrollTrigger: {
+//     trigger: ".step-header",
+//     pin: true,
+//     start: "top 40%",
+//     endTrigger: "steps-layout",
+//     end: "+=" + stepHeight,
+//     scrub: true,
+//   },
+// });
+
 getTitleHeight();
 getHeroHeight();
 
@@ -464,6 +548,7 @@ function start() {
   gsap.delayedCall(0, scaleProfile);
   gsap.delayedCall(0, perpsectiveText);
   gsap.delayedCall(0, morph);
+  gsap.delayedCall(0, animateClients);
 
   // gsap.delayedCall(0, profileColor);
   console.log("animation starts");
