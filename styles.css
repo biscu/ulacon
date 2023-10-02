@@ -798,8 +798,10 @@ body {
 
   .name-wrapper {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     margin: 0;
+    margin-bottom: 1rem;
+    gap: 3rem;
   }
   .fix {
     margin: 0;
@@ -810,10 +812,36 @@ body {
   }
 
   .centered {
-    text-align: left;
+    text-align: left !important;
   }
 
   .service-wrapper {
     flex-direction: column;
+  }
+
+  .target {
+    width: 60px;
+    height: 60px;
+    top: 0%;
+    margin: auto;
+  }
+
+  .name-left {
+    margin-left: 20px;
+    margin-bottom: 1rem;
+  }
+
+  .name-right {
+    margin-left: 30px;
+    margin-top: -1rem;
+  }
+
+  .name-image {
+    width: 100px;
+    margin: 0 auto;
+  }
+
+  .target-image-wrapper {
+    height: 100px;
   }
 }
