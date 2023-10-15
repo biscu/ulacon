@@ -166,6 +166,41 @@ function morph() {
   );
 }
 
+function animateDisplay() {
+  const targets = gsap.utils.toArray(".heading-display");
+  targets.forEach((target) => {
+    let SplitClient = new SplitText(target, {
+      type: "words",
+      wordsClass: "wordsParent",
+      // charsClass: "charsParent",
+    });
+    let SplitParent = new SplitText(target, {
+      type: "words",
+      wordsClass: "wordsChildMission",
+      // charsClass: "charsChild",
+    });
+    let words = SplitParent.words; //an array of all the divs that wrap each character
+    gsap.set(".wordsChildMission", { opacity: 0 });
+    gsap.fromTo(
+      words,
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        ease: ease,
+        stagger: 0.1,
+        scrollTrigger: {
+          trigger: target,
+          markers: false,
+          start: "top 95%",
+          scrub: true,
+          end: "top 20%",
+        },
+      }
+    );
+  });
+}
 // Title
 function heroAnimation() {
   const targets = gsap.utils.toArray(".hero-animated");
@@ -213,7 +248,7 @@ function heroAnimation() {
       delay: 3.1,
       ease: ease,
     });
-    gsap.to(".service", {
+    gsap.to(".service-wrap", {
       y: 0,
       opacity: 1,
       duration: 1.2,
@@ -267,6 +302,21 @@ function animateClients() {
     },
   });
 }
+
+function animateClients2() {
+  gsap.to(".client-item2", {
+    y: 0,
+    opacity: 1,
+    duration: 1.2,
+    ease: ease,
+    stagger: 0.05,
+    scrollTrigger: {
+      trigger: ".client-item2",
+      start: "top 100%",
+    },
+  });
+}
+
 //paragraph
 function paragraphAnimation() {
   const targets = gsap.utils.toArray(".p-animated");
@@ -336,25 +386,6 @@ tlMarquee3.to(".marquee-row3", {
   },
 });
 
-var clientList = document.getElementById("clientList").offsetWidth;
-console.log(clientList);
-
-// ScrollTrigger.batch(".client-item", {
-//   onEnter: (batch) =>
-//     gsap.to(batch, {
-//       width: "90%",
-//       duration: 1,
-//       ease: CustomEase.create("custom", "M0,0,C0.396,0,-0.13,1,1,1"),
-//       scrollTrigger: {
-//         trigger: batch,
-//         markers: false,
-//         start: "top 120%",
-//         end: "bottom 0%",
-//         scrub: 0.01,
-//       },
-//     }),
-// });
-
 var tl = gsap.timeline({});
 gsap.fromTo(".logo-animated", { autoAlpha: 0 }, { autoAlpha: 1 });
 tl.fromTo(
@@ -393,20 +424,6 @@ function loaderUp() {
     // onComplete: start,
   });
 }
-
-// function profileColor() {
-//   gsap.to(".profile-text", {
-//     backgroundColor: "#000000",
-//     ease: CustomEase.create("custom", "M0,0 C0.782,0 0.324,1 1,1 "),
-//     scrollTrigger: {
-//       trigger: ".profile-text",
-//       markers: false,
-//       start: "top 100%",
-//       end: "bottom 20%",
-//       scrub: 0.05,
-//     },
-//   });
-// }
 
 function scaleProfile() {
   gsap.to(".name-image", {
@@ -480,63 +497,6 @@ function scaleProfile() {
   });
 }
 
-function perpsectiveText() {
-  const text = gsap.utils.toArray(".mission");
-  text.forEach((text) => {
-    // let SplitClient = new SplitText(text, {
-    //   type: "words",
-    //   wordsClass: "wordsParent",
-    //   // charsClass: "charsParent",
-    // });
-    // let SplitParent = new SplitText(text, {
-    //   type: "words",
-    //   wordsClass: "wordsChild",
-    //   // charsClass: "charsChild",
-    // });
-    let SplitClient = new SplitText(text, {
-      type: "chars",
-      wordsClass: "wordsParent",
-      // charsClass: "charsParent",
-    });
-    let SplitParent = new SplitText(text, {
-      type: "chars",
-      wordsClass: "wordsChild",
-      // charsClass: "charsChild",
-    });
-    let chars = SplitParent.chars; //an array of all the divs that wrap each character
-    gsap.fromTo(
-      chars,
-      {
-        "will-change": "opacity, transform",
-        opacity: 0,
-      },
-      {
-        ease: CustomEase.create("custom", "M0,0 C0.782,0 0.324,1 1,1 "),
-        opacity: 1,
-        rotationX: 0,
-        stagger: 0.01,
-        scrollTrigger: {
-          trigger: ".mission",
-          start: "top 100%",
-          end: "bottom center-=10%",
-          scrub: 0.5,
-        },
-      }
-    );
-  });
-}
-
-// gsap.to(".step-header", {
-//   scrollTrigger: {
-//     trigger: ".step-header",
-//     pin: true,
-//     start: "top 40%",
-//     endTrigger: "steps-layout",
-//     end: "+=" + stepHeight,
-//     scrub: true,
-//   },
-// });
-
 getTitleHeight();
 getHeroHeight();
 
@@ -546,9 +506,10 @@ function start() {
   gsap.delayedCall(0, titleAnimation);
   gsap.delayedCall(0, paragraphAnimation);
   gsap.delayedCall(0, scaleProfile);
-  gsap.delayedCall(0, perpsectiveText);
   gsap.delayedCall(0, morph);
   gsap.delayedCall(0, animateClients);
+  gsap.delayedCall(0, animateClients2);
+  gsap.delayedCall(0, animateDisplay);
 
   // gsap.delayedCall(0, profileColor);
   console.log("animation starts");
