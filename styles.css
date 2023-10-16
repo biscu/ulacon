@@ -329,6 +329,7 @@ body {
   padding-top: 10%;
   height: 100vh;
   height: 100svh;
+  width: 100%;
 }
 
 .service-title {
@@ -856,9 +857,10 @@ body {
     width: 100%;
   }
   .hero-container {
-    height: 50svh;
-    height: 50vh;
+    height: auto;
     width: inherit;
+    padding-bottom: 2rem;
+    padding-top: 20%;
   }
   .paragraph {
     font-size: 1.1rem;
@@ -891,22 +893,26 @@ body {
     position: relative;
     display: flex;
     justify-content: space-between;
-    outline: 1px solid var(--bg-border);
+    outline: 1px solid var(--text-color-inverted);
     padding: 32px;
     transition: transform 0.3s ease;
+  }
+
+  .step-inner {
+    flex-direction: column;
+  }
+
+  .step-text-wrapper {
+    gap: 1rem;
   }
 
   .grid-row {
     grid-template-columns: repeat(1, 100%);
   }
 
-  .client-item:hover {
-    transform: translateY(-50px);
-    transition: transform 0.5s ease;
-  }
-
   .heading-hero {
     font-size: 2.5rem !important;
+    width: 100%;
   }
 
   .headingXl {
@@ -922,6 +928,7 @@ body {
     padding: 0px;
     gap: 24px;
     margin-bottom: 3rem;
+    padding-top: 3rem;
   }
 
   .grid-row {
@@ -1002,5 +1009,23 @@ body {
   }
   .client-item2 {
     padding: 2rem;
+  }
+  .service-inner {
+    flex-direction: column;
+  }
+  .service-wrap {
+    padding: 1rem;
+  }
+  .marquee {
+    font-size: 2rem !important;
+    padding: 1.5rem;
+  }
+  .contact-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-header {
+    font-size: 2rem;
   }
 }
