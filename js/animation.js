@@ -10,9 +10,6 @@ function getHeroHeight() {
   heroHeight = hero.offsetHeight;
   console.log("h1 title is " + heroHeight + " px");
 }
-step = document.querySelector(".step-wrapper");
-stepHeight = step.offsetHeight;
-console.log("step wrapper " + stepHeight + " px");
 
 const ease = CustomEase.create("custom", "M0,0,C0.496,0.298,0,1,1,1");
 
@@ -166,41 +163,6 @@ function morph() {
   );
 }
 
-function animateDisplay() {
-  const targets = gsap.utils.toArray(".heading-display");
-  targets.forEach((target) => {
-    let SplitClient = new SplitText(target, {
-      type: "words",
-      wordsClass: "wordsParent",
-      // charsClass: "charsParent",
-    });
-    let SplitParent = new SplitText(target, {
-      type: "words",
-      wordsClass: "wordsChildMission",
-      // charsClass: "charsChild",
-    });
-    let words = SplitParent.words; //an array of all the divs that wrap each character
-    gsap.set(".wordsChildMission", { opacity: 0 });
-    gsap.fromTo(
-      words,
-      {
-        opacity: 0,
-      },
-      {
-        opacity: 1,
-        ease: ease,
-        stagger: 0.1,
-        scrollTrigger: {
-          trigger: target,
-          markers: false,
-          start: "top 95%",
-          scrub: true,
-          end: "top 20%",
-        },
-      }
-    );
-  });
-}
 // Title
 function heroAnimation() {
   const targets = gsap.utils.toArray(".hero-animated");
@@ -316,6 +278,31 @@ function animateClients2() {
     },
   });
 }
+
+const stripe = document.querySelector(".steps-layout");
+let stripeWidth = stripe.offsetWidth;
+console.log(stripeWidth);
+let amountToScroll = stripeWidth - window.innerWidth;
+
+const slide = gsap.to(
+  ".steps-layout",
+  {
+    x: -amountToScroll,
+    duration: 3,
+  },
+  "-=1"
+);
+
+ScrollTrigger.create({
+  animation: slide,
+  trigger: ".process",
+  start: "top 0%",
+  end: "+=" + amountToScroll,
+  scrub: 1,
+  pin: true,
+  fastScrollEnd: true,
+  invalidateOnRefresh: true,
+});
 
 //paragraph
 function paragraphAnimation() {
@@ -509,7 +496,6 @@ function start() {
   gsap.delayedCall(0, morph);
   gsap.delayedCall(0, animateClients);
   gsap.delayedCall(0, animateClients2);
-  gsap.delayedCall(0, animateDisplay);
 
   // gsap.delayedCall(0, profileColor);
   console.log("animation starts");

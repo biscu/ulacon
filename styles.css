@@ -57,18 +57,28 @@ body {
 }
 
 .step-header {
-  align-self: flex-start;
-  flex: 1;
   gap: 1rem;
-  width: 50%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.process {
+  overflow: hidden;
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 .steps-layout {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 3rem;
+  width: 200vw;
+  margin: auto 0;
+  padding-left: 20%;
+  padding-right: 20%;
+  flex-wrap: nowrap;
 }
 
 .step-wrapper {
@@ -218,6 +228,11 @@ body {
   z-index: 999999;
 }
 
+.loader-bar {
+  width: 200px;
+  height: 50px;
+}
+
 .h-full {
   height: 100vh;
 }
@@ -273,10 +288,6 @@ body {
   height: 100vh;
   z-index: 9999;
   transform: translateX(100%);
-}
-
-.heading-display > .wordsParent:nth-child(11) .wordsChildMission {
-  background: linear-gradient(90deg, #fff -12.45%, #1fff78 117.16%);
 }
 
 .service-block {
@@ -407,15 +418,6 @@ body {
   align-items: center;
   margin-bottom: 3rem;
 }
-
-.credits {
-  height: 400px;
-  width: 100%;
-  background-color: #22955a;
-  opacity: 1;
-  background-image: radial-gradient(#d7d7d7 0.55px, #22955a 0.55px);
-  background-size: 11px 11px;
-}
 .credits-stripe {
   padding: 1rem;
   padding-bottom: 2rem;
@@ -509,21 +511,6 @@ body {
   position: relative;
 }
 
-#change > .lineChild:nth-child(3) > .lineParent {
-  background: linear-gradient(90deg, #fff -12.45%, #1fff78 117.16%);
-  color: var(--bg-color-inverted);
-  padding-bottom: 9px;
-  width: fit-content;
-  margin-top: 10px;
-}
-
-#done > .wordsParent:nth-child(5) {
-  background: linear-gradient(90deg, #fff -12.45%, #231fff 117.16%);
-  color: var(--bg-color-inverted);
-  padding-bottom: 9px;
-  width: fit-content;
-  margin-top: 10px;
-}
 .client-item {
   opacity: 0;
   display: flex;
@@ -549,7 +536,6 @@ body {
   border-radius: 99999px;
   outline: 1px solid var(--bg-border);
 }
-
 .step-item {
   display: flex;
   justify-content: flex-start;
@@ -576,10 +562,6 @@ body {
   width: 100%;
 }
 
-.step-number {
-  font-size: 4rem;
-}
-
 .logo {
   width: 100px;
   margin-top: 40px;
@@ -593,7 +575,7 @@ body {
 
 .contact-header {
   font-size: 4rem;
-  letter-spacing: -0.04rem;
+  letter-spacing: -0.07rem;
   margin: 0px;
   padding: 0px;
   line-height: 90%;
@@ -652,6 +634,7 @@ body {
   margin-top: -100px;
   margin-bottom: -150px;
   color: var(--text-color);
+  border-radius: 9999999px;
 }
 
 .bg-dark {
@@ -662,38 +645,6 @@ body {
   /* background-color: var(--beige); */
   /* background-color: #c3dccd; */
   /* color: var(--black) !important; */
-}
-.bg-yellow {
-  background: linear-gradient(90deg, #fff -12.45%, #fff61f 117.16%);
-}
-.bg-blue {
-  background: linear-gradient(90deg, #fff -12.45%, #231fff 117.16%);
-}
-.bg-hero {
-  background: rgb(31, 255, 120);
-  background: linear-gradient(
-    0deg,
-    rgba(31, 255, 120, 1) 0%,
-    rgba(255, 255, 255, 1) 70%
-  );
-}
-.bg-green {
-  background-color: var(--green);
-  color: var(--beige) !important;
-}
-
-.bg-purple {
-  background-color: var(--accent-purple);
-  color: var(--text-gray) !important;
-}
-
-.heading-sub {
-  grid-area: sub;
-}
-
-.heading-img {
-  grid-area: img;
-  overflow: hidden;
 }
 
 .mb-80 {
