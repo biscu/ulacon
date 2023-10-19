@@ -1,5 +1,5 @@
 <svg width="101" height="100" viewBox="0 0 101 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path id="step1" d="M0 0L34 0V100H0V0Z" fill="#101010"/>
-<path id="step1" d="M34 0H68V100H34V0Z" fill="#101010"/>
-<path id="step1" d="M101 0H68V100H101V0Z" fill="#101010"/>
+<path id="step1" d="M0 0L34 0V100H0V0Z" fill="#ffffff"/>
+<path id="step1" d="M34 0H68V100H34V0Z" fill="#ffffff"/>
+<path id="step1" d="M101 0H68V100H101V0Z" fill="#ffffff"/>
 </svg>

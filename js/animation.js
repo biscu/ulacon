@@ -13,155 +13,99 @@ function getHeroHeight() {
 
 const ease = CustomEase.create("custom", "M0,0,C0.496,0.298,0,1,1,1");
 
-function morph() {
-  var tl = gsap.timeline();
-  tl.to("#step1a", {
-    morphSVG: "#step2a",
-    ease: ease,
-    scrollTrigger: {
-      trigger: ".step1",
-      markers: false,
-      scrub: true,
-      start: "top 30%",
-      end: "bottom 50%",
-    },
-  });
-  tl.to("#step1b", {
-    morphSVG: "#step2b",
-    ease: ease,
-    scrollTrigger: {
-      trigger: ".step1",
-      markers: false,
-      scrub: true,
-      start: "top 30%",
-      end: "bottom 50%",
-    },
-  });
-  tl.to("#step1c", {
-    morphSVG: "#step2c",
-    ease: ease,
-    scrollTrigger: {
-      trigger: ".step1",
-      markers: false,
-      scrub: true,
-      start: "top 30%",
-      end: "bottom 50%",
-    },
-  });
+// tl.fromTo(
+//   "#step1b",
+//   {
+//     morphSVG: "#step2b",
+//   },
+//   {
+//     morphSVG: "#step3b",
+//     ease: ease,
+//     immediateRender: false,
+//     scrollTrigger: {
+//       trigger: ".step2",
+//       markers: false,
+//       scrub: true,
+//       start: "top 30%",
+//       end: "bottom 50%",
+//     },
+//   }
+// );
 
-  tl.fromTo(
-    "#step1a",
-    {
-      morphSVG: "#step2a",
-    },
-    {
-      morphSVG: "#step3a",
-      ease: ease,
-      immediateRender: false,
-      scrollTrigger: {
-        trigger: ".step2",
-        markers: false,
-        scrub: true,
-        start: "top 30%",
-        end: "bottom 50%",
-      },
-    }
-  );
+// tl.fromTo(
+//   "#step1c",
+//   {
+//     morphSVG: "#step2c",
+//   },
+//   {
+//     morphSVG: "#step3c",
+//     ease: ease,
+//     immediateRender: false,
+//     scrollTrigger: {
+//       trigger: ".step2",
+//       markers: false,
+//       scrub: true,
+//       start: "top 30%",
+//       end: "bottom 50%",
+//     },
+//   }
+// );
 
-  tl.fromTo(
-    "#step1b",
-    {
-      morphSVG: "#step2b",
-    },
-    {
-      morphSVG: "#step3b",
-      ease: ease,
-      immediateRender: false,
-      scrollTrigger: {
-        trigger: ".step2",
-        markers: false,
-        scrub: true,
-        start: "top 30%",
-        end: "bottom 50%",
-      },
-    }
-  );
+// tl.fromTo(
+//   "#step1a",
+//   {
+//     morphSVG: "#step3a",
+//   },
+//   {
+//     morphSVG: "#step4a",
+//     ease: ease,
+//     immediateRender: false,
+//     scrollTrigger: {
+//       trigger: ".step3",
+//       markers: false,
+//       scrub: true,
+//       start: "top 30%",
+//       end: "bottom 50%",
+//     },
+//   }
+// );
 
-  tl.fromTo(
-    "#step1c",
-    {
-      morphSVG: "#step2c",
-    },
-    {
-      morphSVG: "#step3c",
-      ease: ease,
-      immediateRender: false,
-      scrollTrigger: {
-        trigger: ".step2",
-        markers: false,
-        scrub: true,
-        start: "top 30%",
-        end: "bottom 50%",
-      },
-    }
-  );
-
-  tl.fromTo(
-    "#step1a",
-    {
-      morphSVG: "#step3a",
-    },
-    {
-      morphSVG: "#step4a",
-      ease: ease,
-      immediateRender: false,
-      scrollTrigger: {
-        trigger: ".step3",
-        markers: false,
-        scrub: true,
-        start: "top 30%",
-        end: "bottom 50%",
-      },
-    }
-  );
-
-  tl.fromTo(
-    "#step1b",
-    {
-      morphSVG: "#step3b",
-    },
-    {
-      morphSVG: "#step4b",
-      ease: ease,
-      immediateRender: false,
-      scrollTrigger: {
-        trigger: ".step3",
-        markers: false,
-        scrub: true,
-        start: "top 30%",
-        end: "bottom 50%",
-      },
-    }
-  );
-  tl.fromTo(
-    "#step1c",
-    {
-      morphSVG: "#step3c",
-    },
-    {
-      morphSVG: "#step4c",
-      ease: ease,
-      immediateRender: false,
-      scrollTrigger: {
-        trigger: ".step3",
-        markers: false,
-        scrub: true,
-        start: "top 30%",
-        end: "bottom 50%",
-      },
-    }
-  );
-}
+// tl.fromTo(
+//   "#step1b",
+//   {
+//     morphSVG: "#step3b",
+//   },
+//   {
+//     morphSVG: "#step4b",
+//     ease: ease,
+//     immediateRender: false,
+//     scrollTrigger: {
+//       trigger: ".step3",
+//       markers: false,
+//       scrub: true,
+//       start: "top 30%",
+//       end: "bottom 50%",
+//     },
+//   }
+// );
+// tl.fromTo(
+//   "#step1c",
+//   {
+//     morphSVG: "#step3c",
+//   },
+//   {
+//     morphSVG: "#step4c",
+//     ease: ease,
+//     immediateRender: false,
+//     scrollTrigger: {
+//       trigger: ".step3",
+//       markers: false,
+//       scrub: true,
+//       start: "top 30%",
+//       end: "bottom 50%",
+//     },
+//   }
+// );
 
 // Title
 function heroAnimation() {
@@ -194,7 +138,7 @@ function heroAnimation() {
     });
     gsap.to(words, {
       duration: 1.8,
-      opacity: 0,
+      opacity: 1,
       ease: ease,
       stagger: -0.04,
       scrollTrigger: {
@@ -278,32 +222,6 @@ function animateClients2() {
     },
   });
 }
-
-const stripe = document.querySelector(".steps-layout");
-let stripeWidth = stripe.offsetWidth;
-console.log(stripeWidth);
-let amountToScroll = stripeWidth - window.innerWidth;
-
-const slide = gsap.to(
-  ".steps-layout",
-  {
-    x: -amountToScroll,
-    duration: 3,
-  },
-  "-=1"
-);
-
-ScrollTrigger.create({
-  animation: slide,
-  trigger: ".process",
-  start: "top 0%",
-  end: "+=" + amountToScroll,
-  scrub: 1,
-  pin: true,
-  fastScrollEnd: true,
-  invalidateOnRefresh: true,
-});
-
 //paragraph
 function paragraphAnimation() {
   const targets = gsap.utils.toArray(".p-animated");
@@ -493,7 +411,6 @@ function start() {
   gsap.delayedCall(0, titleAnimation);
   gsap.delayedCall(0, paragraphAnimation);
   gsap.delayedCall(0, scaleProfile);
-  gsap.delayedCall(0, morph);
   gsap.delayedCall(0, animateClients);
   gsap.delayedCall(0, animateClients2);
 
