@@ -401,6 +401,23 @@ function scaleProfile() {
   });
 }
 
+const lineContainer = document.getElementById("line-container");
+const line = document.getElementById("line");
+
+document.addEventListener("mousemove", (event) => {
+  const mouseX = event.clientX;
+  const mouseY = event.clientY;
+  const containerRect = lineContainer.getBoundingClientRect();
+  const containerCenterX = containerRect.left + containerRect.width / 2;
+  const containerCenterY = containerRect.top + containerRect.height / 2;
+
+  const deltaX = mouseX - containerCenterX;
+  const deltaY = mouseY - containerCenterY;
+  const angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
+
+  line.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
+});
+
 getTitleHeight();
 getHeroHeight();
 
@@ -418,28 +435,3 @@ function start() {
 }
 
 start();
-
-//ANIMATION FOR SCRUMBLE TEXT
-
-// const landingText = ["connect", "evolve", "dominate"];
-// const masterTl = gsap.timeline({ repeat: -1 });
-// landingText.forEach((word) => {
-//   const tl = gsap.timeline({
-//     repeat: 1,
-//     yoyo: true,
-//     repeatDelay: 1,
-//     ease: "power2.inOut",
-//   });
-//   tl.to(".landing-text", {
-//     duration: 3,
-//     scrambleText: {
-//       text: word,
-//       chars: "!<>-_\\/[]{}—=+*^?#",
-//       //speed: 0.3,
-//       newClass: "accent--text",
-//       revealDelay: 0.5,
-//       tweenLength: false,
-//     },
-//   });
-//   masterTl.add(tl);
-// });
