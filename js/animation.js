@@ -242,7 +242,6 @@ function paragraphAnimation() {
       y: 50,
       ease: ease,
       stagger: 0.08,
-      delay: 0.3,
       scrollTrigger: {
         trigger: target,
         markers: false,
