@@ -312,7 +312,7 @@ body {
   padding: 4rem 4rem;
   opacity: 0;
   color: var(--text-color);
-  background-color: var(--gray);
+  background-color: var(--bg-color);
   transform: translateY(60px);
   display: flex;
   flex: 25%;
