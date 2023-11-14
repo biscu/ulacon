@@ -13,100 +13,6 @@ function getHeroHeight() {
 
 const ease = CustomEase.create("custom", "M0,0,C0.496,0.298,0,1,1,1");
 
-// tl.fromTo(
-//   "#step1b",
-//   {
-//     morphSVG: "#step2b",
-//   },
-//   {
-//     morphSVG: "#step3b",
-//     ease: ease,
-//     immediateRender: false,
-//     scrollTrigger: {
-//       trigger: ".step2",
-//       markers: false,
-//       scrub: true,
-//       start: "top 30%",
-//       end: "bottom 50%",
-//     },
-//   }
-// );
-
-// tl.fromTo(
-//   "#step1c",
-//   {
-//     morphSVG: "#step2c",
-//   },
-//   {
-//     morphSVG: "#step3c",
-//     ease: ease,
-//     immediateRender: false,
-//     scrollTrigger: {
-//       trigger: ".step2",
-//       markers: false,
-//       scrub: true,
-//       start: "top 30%",
-//       end: "bottom 50%",
-//     },
-//   }
-// );
-
-// tl.fromTo(
-//   "#step1a",
-//   {
-//     morphSVG: "#step3a",
-//   },
-//   {
-//     morphSVG: "#step4a",
-//     ease: ease,
-//     immediateRender: false,
-//     scrollTrigger: {
-//       trigger: ".step3",
-//       markers: false,
-//       scrub: true,
-//       start: "top 30%",
-//       end: "bottom 50%",
-//     },
-//   }
-// );
-
-// tl.fromTo(
-//   "#step1b",
-//   {
-//     morphSVG: "#step3b",
-//   },
-//   {
-//     morphSVG: "#step4b",
-//     ease: ease,
-//     immediateRender: false,
-//     scrollTrigger: {
-//       trigger: ".step3",
-//       markers: false,
-//       scrub: true,
-//       start: "top 30%",
-//       end: "bottom 50%",
-//     },
-//   }
-// );
-// tl.fromTo(
-//   "#step1c",
-//   {
-//     morphSVG: "#step3c",
-//   },
-//   {
-//     morphSVG: "#step4c",
-//     ease: ease,
-//     immediateRender: false,
-//     scrollTrigger: {
-//       trigger: ".step3",
-//       markers: false,
-//       scrub: true,
-//       start: "top 30%",
-//       end: "bottom 50%",
-//     },
-//   }
-// );
-
 // Title
 function heroAnimation() {
   const targets = gsap.utils.toArray(".hero-animated");
@@ -148,10 +54,12 @@ function heroAnimation() {
         scrub: true,
       },
     });
-    gsap.from(".navbar", {
+    gsap.from(".logo", {
       duration: 1.2,
-      yPercent: -100,
-      delay: 3.1,
+      yPercent: 40,
+      opacity: 0,
+      stagger: 0.05,
+      delay: 2.8,
       ease: ease,
     });
     gsap.to(".service-wrap", {

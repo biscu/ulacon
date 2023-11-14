@@ -9,7 +9,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="HandheldFriendly" content="true" />
+    <meta name="Ulacon" content="true" />
 
     <!-- Appearance -->
     <link
@@ -52,39 +52,74 @@
     <meta property="og:type" content="" />
     <meta property="og:url" content="" />
     <meta property="og:image" content="/img/preview.png" />
-    <style>
-      .open {
-        display: block;
-      }
-    </style>
   </head>
   <body>
     <div class="loader" id="loader">
       <span class="text-light loader-logo">
         <!-- <span>Ulacon</span> -->
-        <img class="loader-logo" src="assets/loader-logo.svg" />
+        <img class="loader-logo" src="assets/loader-logo.svg" alt="logo" />
         <div class="loader-bar"></div>
       </span>
     </div>
 
     <section class="bg-hero">
       <div class="container">
-        <img class="logo" src="assets/logo.svg" />
+        <nav class="navbar">
+          <img class="logo" src="assets/logo-only.svg" alt="ulacon logo" />
+          <img class="logo" src="assets/github.svg" alt="github logo" />
+          <img class="logo" src="assets/linkedin.svg" alt="linkedin logo" />
+        </nav>
         <div class="hero-container">
           <div class="row">
             <h1 class="headingXl heading-hero hero-animated mb-80">
-              Ulacon helps you navigate → the dynamic ↯ landscape of the digital
-              era.
+              Ulacon helps you <br />
+              navigate <span class="hero-icon">w</span> the dynamic
+              <span class="hero-icon">M</span><br />
+              landscape of the digital era
+              <span class="hero-icon">M</span>
             </h1>
-            <div id="line-container">
-              <img src="assets/compass-line.svg" id="line" />
-            </div>
           </div>
 
+          <!-- <div class="row-split">
+            <div class="line-wrap">
+              <img class="logo-hero" src="assets/logo-only.svg" />
+              <span class="heading-hero-split hero-animated">Ulacon</span>
+              <span class="heading-hero-split hero-animated">helps</span>
+              <span class="heading-hero-split hero-animated">you</span>
+            </div>
+            <div class="line-wrap">
+              <span class="heading-hero-split hero-animated">navigate</span>
+              <span class="heading-hero-split hero-animated">the</span>
+              <span class="heading-hero-split hero-animated">dinamic</span>
+            </div>
+            <div class="line-wrap">
+              <span class="heading-hero-split hero-animated">landscape</span>
+              <span class="heading-hero-split hero-animated">of</span>
+              <span class="heading-hero-split hero-animated">the</span>
+              <span class="heading-hero-split hero-animated">digital</span>
+              <span class="heading-hero-split hero-animated">era.</span>
+            </div>
+          </div> -->
+
           <div class="service-block pb-80">
-            <div class="service-inner">
+            <div class="service-inner relative">
+              <div id="line-container">
+                <svg
+                  id="line"
+                  width="48"
+                  height="16"
+                  viewBox="0 0 48 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M46.4698 6.14381L24.3864 0.0926397C24.1749 0.0201833 23.8921 0.0178525 23.6794 0.0868126L0.924315 6.89988C0.357484 7.03664 -0.000136167 7.52868 -0.0047978 8.09435C-0.00712861 8.37718 0.202084 8.73247 0.412461 8.94634C0.552712 9.08892 0.764254 9.16138 0.975796 9.23384L24.6813 15.7934C24.8929 15.8658 25.1757 15.8682 25.3884 15.7992L46.5914 8.54906C47.0881 8.34101 47.4457 7.84897 47.4504 7.28331C47.455 6.71764 47.0343 6.28989 46.4698 6.14381ZM24.9127 13.4618L5.79328 8.14213L24.0826 2.63581L42.0041 7.45056L24.9127 13.4618Z"
+                    fill="black"
+                  />
+                </svg>
+              </div>
               <div class="service-wrap">
-                <h1 class="headingL service-title s-animated">◎</h1>
+                <!-- <h1 class="headingL service-title s-animated">◎</h1> -->
                 <h1 class="headingL service-title s-animated">Cloud</h1>
                 <p class="paragraph secondary">
                   We build systems that scales up seamlessly with the power of
@@ -93,7 +128,7 @@
                 </p>
               </div>
               <div class="service-wrap">
-                <h1 class="headingL service-title s-animated">◎</h1>
+                <!-- <h1 class="headingL service-title s-animated">◎</h1> -->
                 <h1 class="headingL service-title s-animated">Devops</h1>
                 <p class="paragraph secondary">
                   We get software changes thoroughly tested and taken to market
@@ -101,7 +136,7 @@
                 </p>
               </div>
               <div class="service-wrap">
-                <h1 class="headingL service-title s-animated">❏</h1>
+                <!-- <h1 class="headingL service-title s-animated">❏</h1> -->
                 <h1 class="headingL service-title s-animated">Fullstack</h1>
                 <p class="paragraph secondary">
                   We create responsive and dynamic web applications that
@@ -109,7 +144,7 @@
                 </p>
               </div>
               <div class="service-wrap">
-                <h1 class="headingL service-title s-animated">✦</h1>
+                <!-- <h1 class="headingL service-title s-animated">✦</h1> -->
                 <h1 class="headingL service-title s-animated">Backend</h1>
                 <p class="paragraph secondary">
                   We build strong user authentication, data management, complex
@@ -123,7 +158,7 @@
       </div>
     </section>
 
-    <section class="section bg-light overflown marquee-fixed-height">
+    <!-- <section class="section bg-light overflown marquee-fixed-height">
       <div class="marquee-wrapper">
         <div class="marquee-row">
           <h1 class="headingXl marquee">Docker</h1>
@@ -171,8 +206,7 @@
           <h1 class="headingXl marquee">AWS</h1>
         </div>
       </div>
-    </section>
-
+    </section> -->
     <section class="section bg-dark">
       <div class="container">
         <div class="client-header mb-80">
@@ -204,13 +238,13 @@
             <h2 class="headingL">Infocentric</h2>
           </div>
           <div class="client-item">
-            <h2 class="headingL">Swace</h2>
+            <h2 class="headingL">TV4</h2>
           </div>
         </div>
       </div>
     </section>
     <section class="section bg-dark pb-180 pt-80">
-      <h1 class="pre-davide">Ulacon AKA</h1>
+      <h1 class="pre-davide">Ulacon Aka</h1>
       <div class="container bg-yellow david-container">
         <div class="name-header">
           <div class="name-wrapper mx-auto">
@@ -287,7 +321,7 @@
     <section class="bg-light pt-180">
       <div class="container">
         <h2 class="heading-display mb-80 d-animated">
-          We use tech to make a positive impact on the environment ❀
+          We aim to use tech to make a positive impact on the environment ❀
         </h2>
         <div id="clientList" class="client-list mb-180">
           <div class="client-item2">
@@ -313,12 +347,8 @@
       <div class="container footer">
         <div class="contact-inner">
           <div class="contact-wrapper">
-            <a class="link social-item" href="mailto:David.ulander@ulacon.se"
-              ><h3 class="contact-header">david.ulander@ulacon.se</h3></a
-            >
-            <a class="link social-item" href="tel:+46703049994"
-              ><h3 class="contact-header">+46&nbsp;703049994</h3>
-            </a>
+            <h3 class="contact-header">david.ulander@ulacon.se</h3>
+            <h3 class="contact-header">+46&nbsp;703049994</h3>
             <a
               class="link social-item grid-b"
               href="https://github.com/davidulander"
@@ -336,7 +366,87 @@
       </div>
     </section>
 
-    <section class="bg-dark">
+    <section
+      class="cli-box crt text-white fixed bottom-0 left-0 right-0 bg-accent h-2/4 z-10"
+    >
+      <section class="hidden" id="home">
+        CLI - Command Line Interface Simulation<br />
+        A fun experiment for displaying simple info in a geeky manner.<br />
+        Type 'help' + <kbd>Enter</kbd> -- for available commands.<br />
+      </section>
+
+      <section class="hidden" id="about">
+        <h2><span>&raquo;About</span></h2>
+        <p>
+          This is an experiment built by
+          <a href="http://syndicatefx.com" target="_blank">Paulo Nunes</a> for
+          showcasing a user profile or cv in an unusual but original way by
+          simulating a command line interface. It's nothing more than the usual
+          hidden elements triggered by some jQuery to show/hide each section of
+          content, based on input values.<br />
+          It makes use of
+          <a
+            href="https://github.com/gr8pathik/jquery-texttyper"
+            target="_blank"
+            >jQuery-texttyper</a
+          >
+          for the fancy letter animations.
+        </p>
+      </section>
+
+      <section class="hidden" id="usage">
+        <h2><span>&raquo;Usage</span></h2>
+        <p>
+          Using it is pretty straight forward. Create several(as much as you
+          need) divs or &laquo;section&raquo; elements each with it's unique id
+          to hold your content. Make sure to have an error section (id="error")
+          with some information to warn the user when he/she mistypes a command
+          or if there is no section with that name, think of it as a 404
+          page.<br />
+          A section with id="help" is also required so you can list all the
+          available sections and let your users know what words to write to
+          access that particular content.<br />
+          The input field must be a standalone element and must not be placed
+          inside any of the content divs or sections, and make sure you give it
+          a classname "command", if you want to name it anything else you need
+          to edit the app.js and change all instances of .command in the script
+          to match your chosen classname.<br />
+          In short, just view the source code of this demo, copy/modify it to
+          your liking making sure you include the error and help sections.
+        </p>
+      </section>
+
+      <section class="hidden" id="error">
+        <p>Command not found!</p>
+        <p></p>
+        <p>
+          <span>Type 'help' + <kbd>Enter</kbd> -- for available commands.</span>
+        </p>
+      </section>
+
+      <section class="hidden" id="help">
+        <h2><span>&raquo;Help?</span></h2>
+        <p>
+          <span>Type [command] + <kbd>Enter</kbd></span>
+        </p>
+        <ul>
+          <li>'home' -- Thats obvious!</li>
+          <li>'about' -- What's this for</li>
+          <li>'usage' -- How to</li>
+          <li>'download' -- Download + license</li>
+          <li>'help' -- displays this list</li>
+        </ul>
+      </section>
+
+      <span class="command hidden"
+        >syndicatefx:/$
+        <input
+          class="bg-transparent border-transparent focus:border-transparent focus:outline-none focus:ring-0"
+          type="text"
+      /></span>
+    </section>
+
+    <!-- <section class="bg-dark pb-80">
       <div class="container">
         <div class="keyboard">
           <ul class="row row-0">
@@ -402,6 +512,12 @@
           </ul>
         </div>
       </div>
+    </section> -->
+
+    <section class="bg-dark credits-stripe">
+      <div class="containe">
+        <p>Designed and developed by <a href="#">Davide Biscuso</a></p>
+      </div>
     </section>
 
     <!-- FIX LAST TEXT BUG -->
@@ -410,11 +526,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/CustomEase.min.js"></script>
     <script src="js/DrawSVGPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
     <script src="js/SplitText.min.js"></script>
     <script src="js/ScrambleTextPlugin.min.js"></script>
     <script src="js/CSSRulePlugin.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/cli.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"></script>
     <script src="js/MorphSVGPlugin.min.js"></script>
