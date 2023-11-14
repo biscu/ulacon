@@ -318,6 +318,10 @@ li {
   display: none;
 }
 
+.hidden-mobile {
+  display: block;
+}
+
 .loader {
   /* background-color: var(--black); */
   background-color: var(--bg-color-inverted);
@@ -1217,5 +1221,9 @@ a:hover::after {
     line-height: 80%;
     font-size: 8rem;
     letter-spacing: -0.2rem;
+  }
+
+  .hidden-mobile {
+    display: none;
   }
 }
