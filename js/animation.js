@@ -99,6 +99,53 @@ function titleAnimation() {
   });
 }
 
+function dividerAnimation() {
+  const targets = gsap.utils.toArray(".divider");
+
+  targets.forEach((target) => {
+    gsap.to(target, {
+      duration: 1,
+      width: "100%",
+      ease: ease,
+      scrollTrigger: {
+        trigger: target,
+        markers: false,
+        start: "top 100%",
+      },
+    });
+  });
+}
+
+function serviceTitle() {
+  const targets = gsap.utils.toArray(".s-animated");
+
+  targets.forEach((target) => {
+    let SplitClient3 = new SplitText(target, {
+      type: "chars",
+      charsClass: "wordsParent",
+      // charsClass: "charsParent",
+    });
+    let SplitParent4 = new SplitText(target, {
+      type: "chars",
+      charsClass: "wordsChild",
+      // charsClass: "charsChild",
+    });
+    let chars = SplitParent4.chars; //an array of all the divs that wrap each character
+    gsap.fromTo(".s-animated", { autoAlpha: 0 }, { autoAlpha: 1 });
+    gsap.from(chars, {
+      duration: 1,
+      y: 80,
+      ease: ease,
+      stagger: 0.04,
+      scrollTrigger: {
+        trigger: target,
+        markers: false,
+        start: "top 100%",
+      },
+    });
+  });
+}
+
 function animateClients() {
   gsap.to(".client-item", {
     y: 0,
@@ -284,7 +331,9 @@ function start() {
   gsap.delayedCall(0, loaderUp);
   gsap.delayedCall(0, heroAnimation);
   gsap.delayedCall(0, titleAnimation);
-  gsap.delayedCall(0, paragraphAnimation);
+  gsap.delayedCall(3.4, paragraphAnimation);
+  gsap.delayedCall(3.4, dividerAnimation);
+  gsap.delayedCall(3.4, serviceTitle);
   gsap.delayedCall(0, scaleProfile);
   gsap.delayedCall(0, animateClients);
   gsap.delayedCall(0, animateClients2);

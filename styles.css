@@ -260,6 +260,12 @@ li {
   right: 0;
 }
 
+.divider {
+  height: 1px;
+  width: 0px;
+  background-color: var(--bg-color-inverted);
+}
+
 .u-divider {
   width: 32px;
   margin-right: 1vw;
@@ -412,7 +418,6 @@ li {
 .service-inner {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   gap: 1px;
 }
 
@@ -443,14 +448,12 @@ li {
 }
 
 .service-wrap {
-  border-top: 1px solid var(--bg-color-inverted);
   padding: 4rem 4rem;
   opacity: 0;
   color: var(--text-color);
   background-color: var(--bg-color);
   transform: translateY(60px);
   display: flex;
-  flex: 25%;
   flex-direction: row;
   justify-content: space-between;
   gap: 1rem;
@@ -942,6 +945,10 @@ a:hover::after {
   left: 50%;
   transform: translateX(-50%);
   overflow-y: hidden;
+}
+
+.s-animated {
+  visibility: hidden;
 }
 
 .image-hero {
