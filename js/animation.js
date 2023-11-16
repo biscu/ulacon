@@ -1,14 +1,10 @@
-console.log("animation file is connected");
-
 function getTitleHeight() {
   title = document.querySelector(".h-animated");
   titleHeight = title.offsetHeight;
-  console.log("h1 title is " + titleHeight + " px");
 }
 function getHeroHeight() {
   hero = document.querySelector(".hero-animated");
   heroHeight = hero.offsetHeight;
-  console.log("h1 title is " + heroHeight + " px");
 }
 
 const ease = CustomEase.create("custom", "M0,0,C0.496,0.298,0,1,1,1");
@@ -198,39 +194,11 @@ tlMarquee3.to(".marquee-row3", {
   },
 });
 
-var tl = gsap.timeline({});
-gsap.fromTo(".logo-animated", { autoAlpha: 0 }, { autoAlpha: 1 });
-tl.fromTo(
-  ".letter",
-  {
-    drawSVG: "0%",
-    opacity: 0,
-  },
-  {
-    drawSVG: "100%",
-    opacity: 1,
-    delay: 0.7,
-    duration: 1.5,
-    stagger: 0.02,
-    ease: CustomEase.create("custom", "M0,0,C0.396,0,-0.13,1,1,1"),
-  },
-  "-=0.7"
-);
-
 function loaderUp() {
   gsap.to(".loader", {
     duration: 1.4,
     delay: 2,
     yPercent: -100,
-    // ease: ease,
-    ease: CustomEase.create("custom", "M0,0 C0.782,0 0.324,1 1,1 "),
-    // onComplete: start,
-  });
-  gsap.to(".logo-header", {
-    duration: 0.2,
-    delay: 1.4,
-    yPercent: 200,
-    stagger: 0.3,
     // ease: ease,
     ease: CustomEase.create("custom", "M0,0 C0.782,0 0.324,1 1,1 "),
     // onComplete: start,
@@ -309,23 +277,6 @@ function scaleProfile() {
   });
 }
 
-const lineContainer = document.getElementById("line-container");
-const line = document.getElementById("line");
-
-document.addEventListener("mousemove", (event) => {
-  const mouseX = event.clientX;
-  const mouseY = event.clientY;
-  const containerRect = lineContainer.getBoundingClientRect();
-  const containerCenterX = containerRect.left + containerRect.width / 2;
-  const containerCenterY = containerRect.top + containerRect.height / 2;
-
-  const deltaX = mouseX - containerCenterX;
-  const deltaY = mouseY - containerCenterY;
-  const angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
-
-  line.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
-});
-
 getTitleHeight();
 getHeroHeight();
 
@@ -337,9 +288,6 @@ function start() {
   gsap.delayedCall(0, scaleProfile);
   gsap.delayedCall(0, animateClients);
   gsap.delayedCall(0, animateClients2);
-
-  // gsap.delayedCall(0, profileColor);
-  console.log("animation starts");
 }
 
 start();
