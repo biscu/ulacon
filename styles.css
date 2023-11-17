@@ -63,11 +63,11 @@ body {
 }
 
 .row {
-  list-style: none;
+  /* list-style: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
+  margin: 0; */
 }
 
 .step-header {
@@ -468,13 +468,6 @@ body {
   flex-wrap: wrap;
   flex-direction: row;
   gap: 1px;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .relative {
