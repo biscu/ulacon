@@ -119,6 +119,11 @@ body {
   width: 0px;
   background-color: var(--bg-color-inverted);
 }
+.divider-loader {
+  height: 1px;
+  width: 0px;
+  background-color: var(--bg-color);
+}
 
 .u-divider {
   width: 32px;
@@ -210,6 +215,9 @@ body {
   font-size: 2rem;
   line-height: 1;
   text-align: center;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 .container {
@@ -272,11 +280,19 @@ body {
 .heading-hero > .wordsParent:nth-child(3) {
   padding-bottom: 2px;
 }
+.font-icon {
+  font-family: "Icon";
+}
 
 .hero-icon {
   /* line-height: 146%;
   font-size: 0.5em; */
   text-align: center;
+}
+
+.box {
+  width: 30px;
+  height: 60px;
 }
 
 .hero-icon > .wordsParent {
@@ -286,13 +302,15 @@ body {
   margin-bottom: 0.3em; */
   /* transform: translateY(-5px); */
   /* padding: 0; */
+  position: relative;
   overflow: hidden;
 }
 .hero-icon > .wordsParent > .wordsChild {
+  position: absolute;
   font-family: "Icon";
-  animation-name: compass;
-  animation-duration: 4s;
-  animation-delay: 4s;
+  /* animation-name: compass; */
+  /* animation-duration: 4s;
+  animation-delay: 3.6s; */
   width: 64px;
   height: 64px;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -307,23 +325,20 @@ body {
   line-height: 65px;
   padding-left: 0px;
   padding-right: 2px;
-  transform: rotate(45deg);
+  /* transform: rotate(90deg); */
 }
-
+/* 
 @keyframes compass {
   0% {
-    transform: rotate(45deg);
-  }
-  50% {
-    transform: rotate(270deg);
+    transform: rotate(360deg);
   }
   75% {
-    transform: rotate(-45deg);
+    transform: rotate(720deg);
   }
   100% {
-    transform: rotate(45deg);
+    transform: rotate(0deg);
   }
-}
+} */
 
 .hero-container {
   display: flex;
@@ -378,7 +393,7 @@ body {
 }
 
 .loader-logo {
-  width: 100px;
+  height: 28px;
 }
 
 .target-tag {
@@ -493,7 +508,19 @@ body {
 }
 
 .logo {
-  width: 24px;
+  width: 28px;
+  border-radius: 99999px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
+  box-shadow: 0 0 0 0px rgb(205, 205, 205);
+  transition: box-shadow 0.1s ease-in;
+}
+.logo:hover {
+  box-shadow: 0 0 0 3px rgb(205, 205, 205);
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
 }
 
 .social-item {

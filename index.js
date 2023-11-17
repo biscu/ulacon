@@ -584,7 +584,7 @@ function heroAnimation() {
       y: heroHeight,
       ease: ease,
       stagger: 0.03,
-      delay: 2.4,
+      delay: 1.5,
       scrollTrigger: {
         trigger: target,
         markers: false,
@@ -609,16 +609,22 @@ function heroAnimation() {
       yPercent: 40,
       opacity: 0,
       stagger: 0.05,
-      delay: 2.8,
+      delay: 1.9,
       ease: ease,
     });
     gsap.to(".service-wrap", {
       y: 0,
       opacity: 1,
       duration: 1.2,
-      delay: 3.1,
+      delay: 2,
       ease: ease,
       stagger: 0.1,
+    });
+    gsap.to(".divider-small", {
+      duration: 1,
+      width: 24,
+      delay: 2.5,
+      ease: ease,
     });
   });
 }
@@ -668,21 +674,20 @@ function dividerAnimation() {
       },
     });
   });
-  const targets2 = gsap.utils.toArray(".divider-small");
+}
 
-  targets2.forEach((target) => {
+function dividerLoader() {
+  const targets3 = gsap.utils.toArray(".divider-loader");
+  targets3.forEach((target) => {
     gsap.to(target, {
       duration: 1,
       width: 24,
+      delay: 0.3,
       ease: ease,
-      scrollTrigger: {
-        trigger: target,
-        markers: false,
-        start: "top 100%",
-      },
     });
   });
 }
+dividerLoader();
 
 function serviceTitle() {
   const targets = gsap.utils.toArray(".s-animated");
@@ -817,7 +822,7 @@ function scroll() {
 function loaderUp() {
   gsap.to(".loader", {
     duration: 1.4,
-    delay: 2,
+    delay: 1.4,
     yPercent: -100,
     // ease: ease,
     ease: CustomEase.create("custom", "M0,0 C0.782,0 0.324,1 1,1 "),
@@ -897,6 +902,23 @@ function scaleProfile() {
   });
 }
 
+function spin() {
+  function followMouse(el) {
+    var position = el.getBoundingClientRect();
+    var followMouse = function (event) {
+      var x = event.x - (position.x + position.width / 2);
+      var y = position.y + position.height / 2 - event.y;
+      var deg = Math.atan(x / y) * (180 / Math.PI) + (y < 0 ? 180 : 0);
+      el.style.transform = "translate(0%, 0%) rotate(" + deg + "deg)";
+    };
+    document.addEventListener("mousemove", followMouse, true);
+  }
+
+  followMouse(
+    document.querySelector(".hero-icon > .wordsParent > .wordsChild")
+  );
+}
+
 getTitleHeight();
 getHeroHeight();
 
@@ -904,12 +926,13 @@ function start() {
   gsap.delayedCall(0, loaderUp);
   gsap.delayedCall(0, heroAnimation);
   gsap.delayedCall(0, titleAnimation);
-  gsap.delayedCall(3.4, paragraphAnimation);
-  gsap.delayedCall(3.4, dividerAnimation);
-  gsap.delayedCall(3.4, serviceTitle);
+  gsap.delayedCall(2.4, paragraphAnimation);
+  gsap.delayedCall(2.4, dividerAnimation);
+  gsap.delayedCall(2.4, serviceTitle);
   gsap.delayedCall(0, scaleProfile);
   gsap.delayedCall(0, animateClients);
   gsap.delayedCall(0, animateClients2);
+  gsap.delayedCall(1, spin);
 }
 
 start();
