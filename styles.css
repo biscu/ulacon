@@ -308,9 +308,10 @@ body {
 .hero-icon > .wordsParent > .wordsChild {
   position: absolute;
   font-family: "Icon";
-  /* animation-name: compass; */
-  /* animation-duration: 4s;
-  animation-delay: 3.6s; */
+  animation-name: compass;
+  animation-delay: 2.8s;
+  animation-duration: 2s;
+  transition-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6);
   width: 64px;
   height: 64px;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -322,23 +323,26 @@ body {
   /* padding: 1.1rem 0.8rem 0.4em 0.9rem; */
   border-radius: 9999px;
   font-size: 2.5rem;
-  line-height: 65px;
+  line-height: 63px;
   padding-left: 0px;
   padding-right: 2px;
-  /* transform: rotate(90deg); */
+  color: var(--bg-color);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--text-color);
+  transform: rotate(130deg);
 }
-/* 
+
 @keyframes compass {
   0% {
-    transform: rotate(360deg);
+    transform: rotate(130deg);
   }
-  75% {
-    transform: rotate(720deg);
+  45% {
+    transform: rotate(220deg);
   }
   100% {
-    transform: rotate(0deg);
+    transform: rotate(130deg);
   }
-} */
+}
 
 .hero-container {
   display: flex;
