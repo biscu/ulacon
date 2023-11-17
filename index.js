@@ -901,6 +901,25 @@ function scaleProfile() {
     },
   });
 }
+
+gsap.set(".hero-icon > .wordsParent > .wordsChild", { rotation: 130 });
+
+function rotate() {
+  let arrows = document.querySelector(
+    ".hero-icon > .wordsParent > .wordsChild"
+  );
+  gsap.to(arrows, {
+    ease: ease,
+    rotation: 720,
+    scrollTrigger: {
+      trigger: ".bg-hero",
+      markers: false,
+      scrub: true,
+      stagger: 0.05,
+    },
+  });
+}
+
 getTitleHeight();
 getHeroHeight();
 
@@ -914,6 +933,11 @@ function start() {
   gsap.delayedCall(0, scaleProfile);
   gsap.delayedCall(0, animateClients);
   gsap.delayedCall(0, animateClients2);
+  gsap.delayedCall(1, rotate);
 }
+
+// setTimeout(function () {
+//   console.clear();
+// }, 5000);
 
 start();
