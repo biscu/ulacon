@@ -901,24 +901,6 @@ function scaleProfile() {
     },
   });
 }
-
-function spin() {
-  function followMouse(el) {
-    var position = el.getBoundingClientRect();
-    var followMouse = function (event) {
-      var x = event.x - (position.x + position.width / 2);
-      var y = position.y + position.height / 2 - event.y;
-      var deg = Math.atan(x / y) * (180 / Math.PI) + (y < 0 ? 180 : 0);
-      el.style.transform = "translate(0%, 0%) rotate(" + deg + "deg)";
-    };
-    document.addEventListener("mousemove", followMouse, true);
-  }
-
-  followMouse(
-    document.querySelector(".hero-icon > .wordsParent > .wordsChild")
-  );
-}
-
 getTitleHeight();
 getHeroHeight();
 
@@ -932,7 +914,6 @@ function start() {
   gsap.delayedCall(0, scaleProfile);
   gsap.delayedCall(0, animateClients);
   gsap.delayedCall(0, animateClients2);
-  gsap.delayedCall(1, spin);
 }
 
 start();
