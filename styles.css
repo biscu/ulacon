@@ -114,6 +114,11 @@ body {
   width: 0px;
   background-color: var(--bg-color-inverted);
 }
+.divider-small {
+  height: 1px;
+  width: 0px;
+  background-color: var(--bg-color-inverted);
+}
 
 .u-divider {
   width: 32px;
@@ -494,7 +499,6 @@ body {
 
 .logo {
   width: 24px;
-  margin-top: 40px;
 }
 
 .social-item {

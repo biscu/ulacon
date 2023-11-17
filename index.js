@@ -668,6 +668,20 @@ function dividerAnimation() {
       },
     });
   });
+  const targets2 = gsap.utils.toArray(".divider-small");
+
+  targets2.forEach((target) => {
+    gsap.to(target, {
+      duration: 1,
+      width: 24,
+      ease: ease,
+      scrollTrigger: {
+        trigger: target,
+        markers: false,
+        start: "top 100%",
+      },
+    });
+  });
 }
 
 function serviceTitle() {
