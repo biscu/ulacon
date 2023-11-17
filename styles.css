@@ -337,10 +337,6 @@ body {
   flex: 1;
 }
 
-.service-paragraph {
-  flex: 1;
-}
-
 .heading-hero {
   font-size: 4rem !important;
   /* text-transform: uppercase; */
@@ -358,9 +354,8 @@ body {
   font-size: 2rem;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 4; /* number of lines to show */
-  line-clamp: 4;
   -webkit-box-orient: vertical;
+  flex: 1;
 }
 
 .link {
@@ -741,6 +736,7 @@ a:hover::after {
   }
   .paragraph {
     font-size: 1.1rem;
+    line-height: 150%;
   }
 
   .client-list {
@@ -859,7 +855,9 @@ a:hover::after {
     flex-direction: column;
   }
   .service-wrap {
-    padding: 1rem;
+    padding: 1.5rem 1rem 1.5rem 1rem;
+    flex-direction: column;
+    gap: 0;
   }
   .marquee {
     font-size: 2rem !important;
@@ -885,6 +883,7 @@ a:hover::after {
   .service-title {
     font-size: 2rem !important;
     display: inline-block;
+    flex: 1.5;
   }
 
   .pt-180 {
@@ -910,5 +909,17 @@ a:hover::after {
 
   .hidden-mobile {
     display: none;
+  }
+  .hero-icon > .wordsParent > .wordsChild {
+    width: 40px;
+    height: 40px;
+    font-size: 1.6rem;
+    line-height: 37px;
+  }
+  .service-paragraph {
+    font-size: 1.1rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    flex: 2;
   }
 }
