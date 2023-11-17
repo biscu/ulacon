@@ -693,6 +693,10 @@ a:hover::after {
   margin-top: -0.1em;
   perspective: 2000px;
 }
+
+.david-paragraph {
+  text-align: center;
+}
 @media only screen and (max-width: 1200px) {
   .container {
     padding-left: 1rem;
@@ -726,6 +730,7 @@ a:hover::after {
   .navbar {
     padding-left: 0rem;
     padding-right: 0rem;
+    justify-content: flex-start;
   }
 
   .hero-container {
@@ -810,7 +815,7 @@ a:hover::after {
   }
 
   .centered {
-    text-align: center !important;
+    text-align: left !important;
   }
 
   .target {
