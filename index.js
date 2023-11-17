@@ -914,6 +914,7 @@ function rotate() {
     scrollTrigger: {
       trigger: ".bg-hero",
       markers: false,
+      start: "hero-icon",
       scrub: true,
       stagger: 0.05,
     },
