@@ -241,6 +241,12 @@ tlMarquee3.to(".marquee-row3", {
   },
 });
 
+function scroll() {
+  document.body.removeAttribute("data-lenis-prevent");
+  document.body.classList.remove("overflow");
+  console.log("can scroll now");
+}
+
 function loaderUp() {
   gsap.to(".loader", {
     duration: 1.4,
@@ -248,7 +254,7 @@ function loaderUp() {
     yPercent: -100,
     // ease: ease,
     ease: CustomEase.create("custom", "M0,0 C0.782,0 0.324,1 1,1 "),
-    // onComplete: start,
+    onComplete: scroll,
   });
 }
 
