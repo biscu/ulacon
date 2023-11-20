@@ -926,7 +926,7 @@ getHeroHeight();
 
 function start() {
   gsap.delayedCall(0, loaderUp);
-  gsap.delayedCall(0.5, heroAnimation);
+  gsap.delayedCall(0.2, heroAnimation);
   gsap.delayedCall(0, titleAnimation);
   gsap.delayedCall(2.4, paragraphAnimation);
   gsap.delayedCall(2.4, dividerAnimation);
