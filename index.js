@@ -692,37 +692,6 @@ function dividerLoader() {
 }
 dividerLoader();
 
-function serviceTitle() {
-  let serviceTitletarget = gsap.utils.toArray(".s-animated");
-  serviceTitletarget.forEach((target) => {
-    let SplitClient3 = new SplitText(target, {
-      type: "chars",
-      charsClass: "wordsParent",
-    });
-    let SplitParent4 = new SplitText(target, {
-      type: "chars",
-      charsClass: "wordsChild",
-    });
-    let serviceTitlechars = SplitParent4.chars; //an array of all the divs that wrap each character
-
-    //Make the split happen onpage load, then animate them
-    setTimeout(() => {
-      gsap.fromTo(".s-animated", { autoAlpha: 0 }, { autoAlpha: 1 });
-      gsap.from(serviceTitlechars, {
-        duration: 1,
-        y: 80,
-        ease: ease,
-        stagger: 0.04,
-        scrollTrigger: {
-          trigger: serviceTitlechars,
-          markers: false,
-          start: "top 100%",
-        },
-      });
-    }, "2400");
-  });
-}
-
 function animateClients() {
   gsap.to(".client-item", {
     y: 0,
@@ -751,6 +720,36 @@ function animateClients2() {
   });
 }
 
+function serviceTitle() {
+  let serviceTitletarget = gsap.utils.toArray(".s-animated");
+  serviceTitletarget.forEach((target) => {
+    let SplitClient3 = new SplitText(target, {
+      type: "chars",
+      charsClass: "wordsParent",
+    });
+    let SplitParent4 = new SplitText(target, {
+      type: "chars",
+      charsClass: "wordsChild",
+    });
+    let serviceTitlechars = SplitParent4.chars; //an array of all the divs that wrap each character
+    //Make the split happen onpage load, then animate them
+    setTimeout(() => {
+      gsap.fromTo(".s-animated", { autoAlpha: 0 }, { autoAlpha: 1 });
+      gsap.from(serviceTitlechars, {
+        duration: 1,
+        y: 80,
+        ease: ease,
+        stagger: 0.04,
+        scrollTrigger: {
+          trigger: serviceTitlechars,
+          markers: true,
+          start: "top 100%",
+        },
+      });
+    }, "2400");
+  });
+}
+
 //paragraph
 function paragraphAnimation() {
   const paragraphTarget = gsap.utils.toArray(".p-animated");
@@ -775,7 +774,7 @@ function paragraphAnimation() {
         stagger: 0.08,
         scrollTrigger: {
           trigger: paragraphLines,
-          markers: false,
+          markers: true,
           start: "top 100%",
           scrub: false,
         },
