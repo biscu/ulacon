@@ -194,6 +194,7 @@ body {
 }
 
 .loader {
+  will-change: transform;
   /* background-color: var(--black); */
   background-color: var(--bg-color-inverted);
   position: fixed;
