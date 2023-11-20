@@ -769,7 +769,7 @@ function paragraphAnimation() {
       gsap.from(paragraphLines, {
         opacity: 0,
         duration: 1.2,
-        delay: 0.2,
+        delay: 0,
         y: 50,
         ease: ease,
         stagger: 0.08,
