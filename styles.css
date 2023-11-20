@@ -167,9 +167,13 @@ body {
   display: flex;
   gap: 1px;
 }
+.step-header > .heading-display > .font-icon > .wordsParent > .wordsChild {
+  color: var(--text-color);
+  -webkit-text-stroke: 1px var(--bg-color);
+}
 
 .marquee-fixed-height {
-  padding: 0.05rem 0 1rem 0;
+  padding: 0.1rem 0 1rem 0;
   margin-top: -1rem;
   margin-bottom: -1rem;
 }

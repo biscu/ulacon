@@ -584,7 +584,7 @@ function heroAnimation() {
       y: heroHeight,
       ease: ease,
       stagger: 0.03,
-      delay: 1.5,
+      delay: 1.6,
       scrollTrigger: {
         trigger: target,
         markers: false,
@@ -593,7 +593,7 @@ function heroAnimation() {
       },
     });
     gsap.to(words, {
-      duration: 1.8,
+      duration: 1.9,
       opacity: 1,
       ease: ease,
       stagger: -0.04,
@@ -609,7 +609,7 @@ function heroAnimation() {
       yPercent: 40,
       opacity: 0,
       stagger: 0.05,
-      delay: 1.9,
+      delay: 2,
       ease: ease,
     });
     gsap.to(".service-wrap", {
@@ -623,7 +623,7 @@ function heroAnimation() {
     gsap.to(".divider-small", {
       duration: 1,
       width: 24,
-      delay: 2.5,
+      delay: 2.6,
       ease: ease,
     });
   });
@@ -926,7 +926,7 @@ getHeroHeight();
 
 function start() {
   gsap.delayedCall(0, loaderUp);
-  gsap.delayedCall(0, heroAnimation);
+  gsap.delayedCall(0.5, heroAnimation);
   gsap.delayedCall(0, titleAnimation);
   gsap.delayedCall(2.4, paragraphAnimation);
   gsap.delayedCall(2.4, dividerAnimation);
