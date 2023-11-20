@@ -736,8 +736,8 @@ function serviceTitle() {
     setTimeout(() => {
       gsap.fromTo(".s-animated", { autoAlpha: 0 }, { autoAlpha: 1 });
       gsap.from(serviceTitlechars, {
-        duration: 1,
-        y: 80,
+        duration: 0.7,
+        y: 68,
         ease: ease,
         stagger: 0.04,
         scrollTrigger: {
