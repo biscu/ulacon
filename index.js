@@ -742,7 +742,7 @@ function serviceTitle() {
         stagger: 0.04,
         scrollTrigger: {
           trigger: serviceTitlechars,
-          markers: true,
+          markers: false,
           start: "top 100%",
         },
       });
@@ -774,7 +774,7 @@ function paragraphAnimation() {
         stagger: 0.08,
         scrollTrigger: {
           trigger: paragraphLines,
-          markers: true,
+          markers: false,
           start: "top 100%",
           scrub: false,
         },
