@@ -172,6 +172,11 @@ body {
   -webkit-text-stroke: 1px var(--bg-color);
 }
 
+.contact-hero > .font-icon {
+  color: var(--bg-color);
+  -webkit-text-stroke: 1px var(--text-color);
+}
+
 .marquee-fixed-height {
   padding: 0.1rem 0 1rem 0;
   margin-top: -1rem;
@@ -560,7 +565,7 @@ a:hover::after {
 }
 
 .contact-hero {
-  margin-bottom: -1.5rem;
+  margin-bottom: -2.7rem;
   text-align: center;
   font-size: 8rem;
   letter-spacing: -0.2rem;
@@ -935,7 +940,7 @@ a:hover::after {
   }
 
   .contact-hero {
-    margin-bottom: -0.1rem;
+    margin-bottom: -1.2rem;
     text-align: center;
     line-height: 80%;
     font-size: 8rem;
