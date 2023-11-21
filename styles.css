@@ -148,17 +148,24 @@ body {
   background-color: var(--bg-color);
 }
 
+.author {
+  line-height: 150%;
+  margin-bottom: 40px;
+}
+
 .marquee-row {
   white-space: nowrap;
   width: 100vw;
   display: flex;
   gap: 1px;
+  will-change: transform;
 }
 .marquee-row2 {
   white-space: nowrap;
   width: 100vw;
   display: flex;
   gap: 1px;
+  will-change: transform;
 }
 
 .marquee-row3 {
@@ -166,6 +173,7 @@ body {
   width: 100vw;
   display: flex;
   gap: 1px;
+  will-change: transform;
 }
 .step-header > .heading-display > .font-icon > .wordsParent > .wordsChild {
   color: var(--text-color);
@@ -719,6 +727,12 @@ a:hover::after {
   margin-left: -0.06em;
   margin-top: -0.1em;
 }
+.lineChildPar {
+  overflow: hidden;
+  padding-bottom: 0.1em;
+  padding-right: 0.06em;
+  margin-top: -0.1em;
+}
 .wordsChild {
 }
 .wordsParent {
@@ -746,6 +760,16 @@ a:hover::after {
   .step-header {
     position: static;
     width: 100%;
+  }
+}
+
+.lg-view {
+  display: none;
+}
+
+@media only screen and (min-width: 1600px) {
+  .lg-view {
+    display: block;
   }
 }
 

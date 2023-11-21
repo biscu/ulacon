@@ -551,6 +551,8 @@
 gsap.config({
   nullTargetWarn: false,
 });
+gsap.ticker.lagSmoothing(2000, 16);
+gsap.ticker.fps(120);
 
 function getTitleHeight() {
   title = document.querySelector(".h-animated");
@@ -735,11 +737,14 @@ function serviceTitle() {
     //Make the split happen onpage load, then animate them
     setTimeout(() => {
       gsap.fromTo(".s-animated", { autoAlpha: 0 }, { autoAlpha: 1 });
-      gsap.from(serviceTitlechars, {
+      var tween = gsap.from(serviceTitlechars, {
         duration: 0.7,
         y: 68,
         ease: ease,
         stagger: 0.04,
+        onComplete: () => {
+          tween.kill();
+        },
         scrollTrigger: {
           trigger: serviceTitlechars,
           markers: false,
@@ -766,13 +771,16 @@ function paragraphAnimation() {
 
     setTimeout(() => {
       gsap.fromTo(".p-animated", { autoAlpha: 0 }, { autoAlpha: 1 });
-      gsap.from(paragraphLines, {
+      var tween = gsap.from(paragraphLines, {
         opacity: 0,
         duration: 1.2,
         delay: 0,
         y: 50,
         ease: ease,
         stagger: 0.08,
+        onComplete: () => {
+          tween.kill();
+        },
         scrollTrigger: {
           trigger: paragraphLines,
           markers: false,
@@ -791,7 +799,6 @@ tl.to(".marquee-row", {
     trigger: ".marquee-row",
     markers: false,
     start: "top 100%",
-    end: "bottom -20%",
     scrub: 0.05,
   },
 });
@@ -804,7 +811,6 @@ tlMarquee2.to(".marquee-row2", {
     trigger: ".marquee-row2",
     markers: false,
     start: "top 100%",
-    end: "bottom -20%",
     scrub: 0.05,
   },
 });
@@ -817,7 +823,6 @@ tlMarquee3.to(".marquee-row3", {
     trigger: ".marquee-row3",
     markers: false,
     start: "top 100%",
-    end: "bottom -20%",
     scrub: 0.05,
   },
 });
@@ -828,13 +833,16 @@ function scroll() {
 }
 
 function loaderUp() {
-  gsap.to(".loader", {
+  var tween = gsap.to(".loader", {
     duration: 1.4,
     delay: 1.4,
     yPercent: -100,
     // ease: ease,
     ease: CustomEase.create("custom", "M0,0 C0.782,0 0.324,1 1,1 "),
-    onComplete: scroll,
+    onComplete: () => {
+      scroll();
+      tween.kill();
+    },
   });
 }
 
