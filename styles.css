@@ -920,7 +920,7 @@ a:hover::after {
     flex-direction: column;
   }
   .service-wrap {
-    padding: 1.5rem 1rem 1.5rem 1rem;
+    padding: 1.5rem 0rem 1.5rem 0rem;
     flex-direction: column;
     gap: 0;
   }
