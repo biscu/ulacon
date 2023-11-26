@@ -486,6 +486,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  justify-content: space-between;
   gap: 1px;
 }
 
@@ -501,6 +502,8 @@ body {
   outline: 1px solid var(--text-color-inverted);
   padding: 3rem;
   transform: translateY(60px);
+  width: 16%;
+  flex-grow: 1;
 }
 .client-item2 {
   opacity: 0;
@@ -819,7 +822,7 @@ a:hover::after {
     display: flex;
     justify-content: space-between;
     outline: 1px solid var(--text-color-inverted);
-    padding: 32px;
+    padding: 2rem;
     transition: transform 0.3s ease;
   }
 
@@ -910,9 +913,7 @@ a:hover::after {
     line-height: 100%;
     width: 100%;
   }
-  .client-item {
-    padding: 2rem;
-  }
+
   .client-item2 {
     padding: 2rem;
   }
