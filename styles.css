@@ -490,6 +490,14 @@ body {
   gap: 1px;
 }
 
+.client-list2 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 1px;
+}
+
 .relative {
   position: relative;
 }
@@ -824,6 +832,7 @@ a:hover::after {
     outline: 1px solid var(--text-color-inverted);
     padding: 2rem;
     transition: transform 0.3s ease;
+    width: 25%;
   }
 
   .step-inner {
